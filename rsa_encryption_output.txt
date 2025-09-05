@@ -1,0 +1,69 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+This C++ program demonstrates RSA (Rivest–Shamir–Adleman) encryption and decryption.
+
+--------------------------------
+
+STEP_0: Key Generation
+
+--------------------------------
+
+p = 1283 // first prime number
+
+q = 2789 // second prime number
+
+n = p * q = 3578287 // the modulus in both the encryption and the decryption processes
+
+phi = (p - 1) * (q - 1) = 3574216 // Euler's Totient function: ϕ(n) = (p − 1) * (q − 1)
+
+--------------------------------
+
+STEP_1: Choose e such that 1 < e < phi and gcd(e, phi) = 1
+
+--------------------------------
+
+e = 1916677 // public exponent
+
+--------------------------------
+
+STEP_2: Compute the private key (d)
+
+--------------------------------
+
+d = 1313549 // such that (e ∗ d) % ϕ(n) = 1
+
+--------------------------------
+
+STEP_3: Display the public and private keys
+
+--------------------------------
+
+Public Key: (1916677, 3578287)
+
+Private Key: (1313549, 3578287)
+
+--------------------------------
+
+STEP_4: Encrypt a message (m must be less than n)
+
+--------------------------------
+
+The value which was entered for m is 3578287.
+
+m has been reset to 3578286 due to the fact that the input value for m was either less than one or else greater than 3578286.
+
+c = (m ^ e) % n = 3578286 // encryption such that m = (c ^ d) % n
+
+--------------------------------
+
+STEP_5: Decrypt the message
+
+--------------------------------
+
+decrypted_message = 3578286 // such that m = (c ^ d) % n
+
+--------------------------------
+End Of Program
+--------------------------------

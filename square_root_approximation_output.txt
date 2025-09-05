@@ -1,0 +1,351 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+The value which was entered for x is -25.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 25. // real number to take the square root of
+S = 25. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 13.
+Y := (absolute_value_of_original_x / S) = 1.923076923076923076881376839519788290999713353812694549560546875.
+
+i := 1.
+S := ((S + Y) / 2) = 7.4615384615384615384948985283841693672002293169498443603515625.
+Y := (absolute_value_of_original_x / S) = 3.35051546391752577322940831461295374538167379796504974365234375.
+
+i := 2.
+S := ((S + Y) / 2) = 5.406026962727993655753733204250011112890206277370452880859375.
+Y := (absolute_value_of_original_x / S) = 4.624468241161801379014717472415441079647280275821685791015625.
+
+i := 3.
+S := ((S + Y) / 2) = 5.0152476019448975173842253383327260962687432765960693359375.
+Y := (absolute_value_of_original_x / S) = 4.984798754563000494459401590319203023682348430156707763671875.
+
+i := 4.
+S := ((S + Y) / 2) = 5.0000231782539490059218134643259645599755458533763885498046875.
+Y := (absolute_value_of_original_x / S) = 4.99997682185349678722630084592992716352455317974090576171875.
+
+i := 5.
+S := ((S + Y) / 2) = 5.000000000053722896790897589625046748551540076732635498046875.
+Y := (absolute_value_of_original_x / S) = 4.999999999946277103209102410374953251448459923267364501953125.
+
+--------------------------------
+
+A = approximate_square_root(-25) = -5.000000000053722896790897589625046748551540076732635498046875.
+
+(A * A) = 25.00000000053722896790897589625046748551540076732635498046875. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 100.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 100. // real number to take the square root of
+S = 100. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 50.5.
+Y := (absolute_value_of_original_x / S) = 1.98019801980198019799618569525279099252657033503055572509765625.
+
+i := 1.
+S := ((S + Y) / 2) = 26.24009900990099009888967263037784505286253988742828369140625.
+Y := (absolute_value_of_original_x / S) = 3.81096123007263465711814964809178718496696092188358306884765625.
+
+i := 2.
+S := ((S + Y) / 2) = 15.025530119986812377895490921986265675514005124568939208984375.
+Y := (absolute_value_of_original_x / S) = 6.6553392260670379662786111385486265135114081203937530517578125.
+
+i := 3.
+S := ((S + Y) / 2) = 10.84043467302692517230389146476454698131419718265533447265625.
+Y := (absolute_value_of_original_x / S) = 9.22472234889428614745821022324889781884849071502685546875.
+
+i := 4.
+S := ((S + Y) / 2) = 10.032578510960605659881050844006722400081343948841094970703125.
+Y := (absolute_value_of_original_x / S) = 9.96752728032478032237084786260084001696668565273284912109375.
+
+i := 5.
+S := ((S + Y) / 2) = 10.00005289564269299155963022229798298212699592113494873046875.
+Y := (absolute_value_of_original_x / S) = 9.999947104637100430378493509664394878200255334377288818359375.
+
+i := 6.
+S := ((S + Y) / 2) = 10.00000000013989671053538099698698715656064450740814208984375.
+Y := (absolute_value_of_original_x / S) = 9.99999999986010328946461900301301284343935549259185791015625.
+
+--------------------------------
+
+A = approximate_square_root(100) = 10.00000000013989671053538099698698715656064450740814208984375.
+
+(A * A) = 100.000000002797934210707619939739743131212890148162841796875. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 3.1400001049041748046875.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 3.1400001049041748046875. // real number to take the square root of
+S = 3.1400001049041748046875. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 2.07000005245208740234375.
+Y := (absolute_value_of_original_x / S) = 1.51690822480153237488721684744774620412499643862247467041015625.
+
+i := 1.
+S := ((S + Y) / 2) = 1.793454138626809888615483423723873102062498219311237335205078125.
+Y := (absolute_value_of_original_x / S) = 1.750811485655480336811294639343117296448326669633388519287109375.
+
+i := 2.
+S := ((S + Y) / 2) = 1.77213281214114511271338903153349519925541244447231292724609375.
+Y := (absolute_value_of_original_x / S) = 1.771876285677669133245167032431055531560559757053852081298828125.
+
+i := 3.
+S := ((S + Y) / 2) = 1.77200454890940712303348814060655058710835874080657958984375.
+Y := (absolute_value_of_original_x / S) = 1.7720045396253132270227015343522225521155633032321929931640625.
+
+--------------------------------
+
+A = approximate_square_root(3.1400001049041748046875) = 1.77200454890940712303348814060655058710835874080657958984375.
+
+(A * A) = 3.14000012135563142073695075406902788017760030925273895263671875. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is -16.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 16. // real number to take the square root of
+S = 16. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 8.5.
+Y := (absolute_value_of_original_x / S) = 1.882352941176470588241671777485208849611808545887470245361328125.
+
+i := 1.
+S := ((S + Y) / 2) = 5.191176470588235294066625780118329203105531632900238037109375.
+Y := (absolute_value_of_original_x / S) = 3.082152974504249291765045626334540429525077342987060546875.
+
+i := 2.
+S := ((S + Y) / 2) = 4.1366647225462422929158357032264348163153044879436492919921875.
+Y := (absolute_value_of_original_x / S) = 3.867850327050802394790451899098115973174571990966796875.
+
+i := 3.
+S := ((S + Y) / 2) = 4.00225752479852234406998423565937628154642879962921142578125.
+Y := (absolute_value_of_original_x / S) = 3.99774374858735659192532363448435717145912349224090576171875.
+
+i := 4.
+S := ((S + Y) / 2) = 4.00000063669293946799765393507186672650277614593505859375.
+Y := (absolute_value_of_original_x / S) = 3.99999936330716187649937654047249679933884181082248687744140625.
+
+i := 5.
+S := ((S + Y) / 2) = 4.000000000000050672140095020523631319520063698291778564453125.
+Y := (absolute_value_of_original_x / S) = 3.999999999999949327859904979476368680479936301708221435546875.
+
+--------------------------------
+
+A = approximate_square_root(-16) = -4.000000000000050672140095020523631319520063698291778564453125.
+
+(A * A) = 16.000000000000405377120760164189050556160509586334228515625. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 0.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 0. // real number to take the square root of
+S = 0. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+--------------------------------
+
+A = approximate_square_root(0) = 0.
+
+(A * A) = 0. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is -1.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 1. // real number to take the square root of
+S = 1. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+--------------------------------
+
+A = approximate_square_root(-1) = -1.
+
+(A * A) = 1. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 1.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 1. // real number to take the square root of
+S = 1. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+--------------------------------
+
+A = approximate_square_root(1) = 1.
+
+(A * A) = 1. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is -100.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 100. // real number to take the square root of
+S = 100. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 50.5.
+Y := (absolute_value_of_original_x / S) = 1.98019801980198019799618569525279099252657033503055572509765625.
+
+i := 1.
+S := ((S + Y) / 2) = 26.24009900990099009888967263037784505286253988742828369140625.
+Y := (absolute_value_of_original_x / S) = 3.81096123007263465711814964809178718496696092188358306884765625.
+
+i := 2.
+S := ((S + Y) / 2) = 15.025530119986812377895490921986265675514005124568939208984375.
+Y := (absolute_value_of_original_x / S) = 6.6553392260670379662786111385486265135114081203937530517578125.
+
+i := 3.
+S := ((S + Y) / 2) = 10.84043467302692517230389146476454698131419718265533447265625.
+Y := (absolute_value_of_original_x / S) = 9.22472234889428614745821022324889781884849071502685546875.
+
+i := 4.
+S := ((S + Y) / 2) = 10.032578510960605659881050844006722400081343948841094970703125.
+Y := (absolute_value_of_original_x / S) = 9.96752728032478032237084786260084001696668565273284912109375.
+
+i := 5.
+S := ((S + Y) / 2) = 10.00005289564269299155963022229798298212699592113494873046875.
+Y := (absolute_value_of_original_x / S) = 9.999947104637100430378493509664394878200255334377288818359375.
+
+i := 6.
+S := ((S + Y) / 2) = 10.00000000013989671053538099698698715656064450740814208984375.
+Y := (absolute_value_of_original_x / S) = 9.99999999986010328946461900301301284343935549259185791015625.
+
+--------------------------------
+
+A = approximate_square_root(-100) = -10.00000000013989671053538099698698715656064450740814208984375.
+
+(A * A) = 100.000000002797934210707619939739743131212890148162841796875. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 0.5.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 0.5. // real number to take the square root of
+S = 0.5. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+--------------------------------
+
+A = approximate_square_root(0.5) = 0.5.
+
+(A * A) = 0.25. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 0.333000004291534423828125.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 0.333000004291534423828125. // real number to take the square root of
+S = 0.333000004291534423828125. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+--------------------------------
+
+A = approximate_square_root(0.333000004291534423828125) = 0.333000004291534423828125.
+
+(A * A) = 0.110889002858161944686798960901796817779541015625. // the approximate absolute value of x
+
+--------------------------------
+
+The value which was entered for x is 64.
+
+--------------------------------
+
+Computing the approximate square root of x:
+
+x = 64. // real number to take the square root of
+S = 64. // variable for storing the approximate square root of x
+Y = 1. // number to add to S before dividing S by 2 for each while loop iteration, i
+
+i := 0.
+S := ((S + Y) / 2) = 32.5.
+Y := (absolute_value_of_original_x / S) = 1.96923076923076923079591882270733549376018345355987548828125.
+
+i := 1.
+S := ((S + Y) / 2) = 17.234615384615384614530597673365264199674129486083984375.
+Y := (absolute_value_of_original_x / S) = 3.713456817674626199606013887688504837569780647754669189453125.
+
+i := 2.
+S := ((S + Y) / 2) = 10.47403610114500540663462491153268274501897394657135009765625.
+Y := (absolute_value_of_original_x / S) = 6.1103474708287113035913573622082139991107396781444549560546875.
+
+i := 3.
+S := ((S + Y) / 2) = 8.292191785986858355329831571367549258866347372531890869140625.
+Y := (absolute_value_of_original_x / S) = 7.7181041697750993844928668607963118120096623897552490234375.
+
+i := 4.
+S := ((S + Y) / 2) = 8.00514797788097886947766834708772876183502376079559326171875.
+Y := (absolute_value_of_original_x / S) = 7.994855332698205459783513671112586962408386170864105224609375.
+
+i := 5.
+S := ((S + Y) / 2) = 8.00000165528959216419691014010595608851872384548187255859375.
+Y := (absolute_value_of_original_x / S) = 7.999998344710750333534654554767939771409146487712860107421875.
+
+i := 6.
+S := ((S + Y) / 2) = 8.0000000000001712484321014784427461563609540462493896484375.
+Y := (absolute_value_of_original_x / S) = 7.9999999999998287515678985215572538436390459537506103515625.
+
+--------------------------------
+
+A = approximate_square_root(64) = 8.0000000000001712484321014784427461563609540462493896484375.
+
+(A * A) = 64.000000000002739974913623655083938501775264739990234375. // the approximate absolute value of x
+
+--------------------------------
+End Of Program
+--------------------------------

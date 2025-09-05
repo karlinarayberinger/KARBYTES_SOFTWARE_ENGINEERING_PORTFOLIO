@@ -1,0 +1,70 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+
+This Python program demonstrates RSA (Rivest–Shamir–Adleman) encryption and decryption.
+
+--------------------------------
+
+STEP_0: Key Generation
+
+--------------------------------
+
+p = 3769 // first prime number
+
+q = 3943 // second prime number
+
+n = p * q = 14861167 // the modulus in both the encryption and the decryption processes
+
+phi = (p - 1) * (q - 1) = 14853456 // Euler's Totient function: ϕ(n) = (p − 1) * (q − 1)
+
+--------------------------------
+
+STEP_1: Choose e such that 1 < e < phi and gcd(e, phi) = 1
+
+--------------------------------
+
+e = 8013779 // public exponent
+
+--------------------------------
+
+STEP_2: Compute the private key (d)
+
+--------------------------------
+
+d = 6097067 // such that (e ∗ d) % ϕ(n) = 1
+
+--------------------------------
+
+STEP_3: Display the public and private keys
+
+--------------------------------
+
+Public Key: (8013779, 14861167)
+
+Private Key: (6097067, 14861167)
+
+--------------------------------
+
+STEP_4: Encrypt a message (m must be less than n)
+
+--------------------------------
+
+The value which was entered for m is 14861167.
+
+m has been reset to 14861166 due to the fact that the input value for m was either less than one or else greater than 14861166.
+
+c = (m ^ e) % n = 14861166 // encryption such that m = (c ^ d) % n
+
+--------------------------------
+
+STEP_5: Decrypt the message
+
+--------------------------------
+
+decrypted_message = 14861166 // such that m = (c ^ d) % n
+
+--------------------------------
+End Of Program
+--------------------------------
