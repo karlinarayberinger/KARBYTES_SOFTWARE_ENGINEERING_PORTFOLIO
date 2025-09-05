@@ -1,0 +1,345 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 0: TRIANGLE class default constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE point;
+triangle.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 1: TRIANGLE class default constructor, TRIANGLE class overloaded ostream operator method, TRIANGLE getter methods, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle;
+POINT copy_of_point_A = triangle.get_A();
+POINT copy_of_point_B = triangle.get_B();
+POINT copy_of_point_C = triangle.get_C();
+output << triangle;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_A.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a38. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a3c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output << copy_of_point_A;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a38. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a3c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_B.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a40. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a44. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output << copy_of_point_B;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a40. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a44. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+copy_of_point_C.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+output << copy_of_point_C;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+triangle.get_side_length_AB() = 1.
+triangle.get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125.
+triangle.get_side_length_CA() = 1.
+triangle.get_interior_angle_ABC() = 45.0000380099060208749506273306906223297119140625.
+triangle.get_interior_angle_BCA() := 45.0000380099060208749506273306906223297119140625.
+triangle.get_interior_angle_CAB() = 90.0000760198120843824654002673923969268798828125.
+triangle.get_perimeter() = 3.41421356237309492343001693370752036571502685546875.
+triangle.get_area() = 0.4999999999999997779553950749686919152736663818359375.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 2: TRIANGLE class normal constructors, TRIANGLE class copy constructor, TRIANGLE class print method, and TRIANGLE class destructor.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle_0 = TRIANGLE(-1, -1, 0, 5, 2, -5); // normal constructor which takes exactly 6 int type values as function inputs
+TRIANGLE triangle_1 = TRIANGLE( POINT(-3,-3), POINT(-4,-8), POINT(0,1) ); // normal constructor which takes 3 POINT type values as function inputs
+TRIANGLE triangle_2 = TRIANGLE(triangle_0); // copy constructor which takes 1 TRIANGLE type value as function input
+triangle_0.print(output);
+triangle_1.print(output);
+triangle_2.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a10. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a10. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a18. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a20. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-1,-1). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,5). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(2,-5). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 10.198039027185568983213670435361564159393310546875. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 6.08276253029821933893117602565325796604156494140625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 6. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = -1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  133.66789305056954617612063884735107421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  20.772272227633603591812061495147645473480224609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  25.559986761421026102425457793287932872772216796875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.000152039624168764930800534784793853759765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 21.280801557483787433966426760889589786529541015625. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 10.9999999999999946709294817992486059665679931640625. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a30. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a30. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-3,-3). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(-4,-8). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(0,1). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 9.848857801796103927927106269635260105133056640625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 5.0990195135927844916068352176807820796966552734375. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = 2.25. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  154.440165278203068055518087930977344512939453125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  12.6525671877242711360622706706635653972625732421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  12.907419573696753190006347722373902797698974609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.00015203962408349980250932276248931884765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 19.94787731538888664317710208706557750701904296875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 5.49999999999998312461002569762058556079864501953125. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(-1,-1). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,5). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(2,-5). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 10.198039027185568983213670435361564159393310546875. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 5. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 6.08276253029821933893117602565325796604156494140625. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = 6. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -5. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = -1.3333333333333332593184650249895639717578887939453125. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  133.66789305056954617612063884735107421875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  20.772272227633603591812061495147645473480224609375. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  25.559986761421026102425457793287932872772216796875. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.000152039624168764930800534784793853759765625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 21.280801557483787433966426760889589786529541015625. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 10.9999999999999946709294817992486059665679931640625. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 3: degenerate triangle examples.
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle_0 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(1,1) ); // Because these inputs would generate a degenerate triangle, default coordinate values are used for A, B, and C instead of the input values.
+TRIANGLE triangle_1 = TRIANGLE( POINT(-1,-1), POINT(0,0), POINT(-1,-1) ); // Because these inputs represent only 2 unique points instead of 3 unique points, default coordinate values are used for A, B, and C instead of the input values.
+triangle_0.print(output);
+triangle_1.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a30. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a30. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a38. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a40. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+// Unit Test # 4: Demonstrate how the methods of the POINT class cannot be called by a TRIANGLE object due to the fact that the methods of the POINT class each have uniquely corresponding function prototypes which are prefaced with the private access specifier in the POINT class header file (i.e. POINT.h).
+--------------------------------------------------------------------------------------------------
+TRIANGLE triangle;
+triangle.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a50. // The keyword named this is a pointer which stores the memory address of the first memory cell of a TRIANGLE sized chunk of contiguous memory cells which are allocated to the caller TRIANGLE object.
+&A = 0x7ffcc3aa1a50. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named A.
+&B = 0x7ffcc3aa1a58. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named B.
+&C = 0x7ffcc3aa1a60. // The reference operation returns the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the POINT data attribute named C.
+sizeof(int) = 4. // The sizeof() operation returns the nonnegative integer number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(TRIANGLE) = 24. // The sizeof() operation returns the nonnegative integer number of bytes of memory which a TRIANGLE type object occupies. (Each memory cell has a data capacity of 1 byte).
+A = POINT(0,0). // A represents a point (which is neither B nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+B = POINT(0,1). // B represents a point (which is neither A nor C) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+C = POINT(1,0). // C represents a point (which is neither A nor B) plotted on a two-dimensional Cartesian grid (such that the X value represents a real whole number position along the horizontal axis of the Cartesian grid while Y represents a real whole number position along the vertical axis of the same Cartesian grid).
+a = get_side_length_BC() = 1.4142135623730951454746218587388284504413604736328125. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points B and C.
+b = get_side_length_CA() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points C and A.
+c = get_side_length_AB() = 1. // The method returns the approximate nonnegative real number of Cartesian grid unit lengths which span the length of the shortest path between points A and B.
+A.get_slope_of_line_to(B) = inf. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points A and B.
+B.get_slope_of_line_to(C) = -1. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points B and C.
+C.get_slope_of_line_to(A) = 0. // The method returns the approximate nonnegative real number which represents the slope of the line which intersects points C and A.
+get_interior_angle_CAB() =  90.0000760198120843824654002673923969268798828125. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are C and A with the line segment whose endpoints are A and B such that those two line segments intersect at A (and the angle measurement is in degrees and not in radians).
+get_interior_angle_ABC() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are A and B with the line segment whose endpoints are B and C such that those two line segments intersect at B (and the angle measurement is in degrees and not in radians).
+get_interior_angle_BCA() =  45.0000380099060208749506273306906223297119140625. // The method returns the approximate nonnegative real number angle measurement of the acute or else right angle formed by the intersection of the line segment whose endpoints are B and C with the line segment whose endpoints are C and A such that those two line segments intersect at C (and the angle measurement is in degrees and not in radians).
+get_interior_angle_CAB() + get_interior_angle_ABC() + get_interior_angle_BCA() = 180.0001520396241403432213701307773590087890625. // sum of all three approximate interior angle measurements of the triangle represented by the caller TRIANGLE object (in degrees and not in radians)
+get_perimeter() = a + b + c = 3.41421356237309492343001693370752036571502685546875. // The method returns the sum of the three approximated side lengths of the triangle which the caller TRIANGLE object represents.
+get_area() = 0.4999999999999997779553950749686919152736663818359375. // The method returns the approximate nonnegative real number of Cartesian grid unit squares which are enclosed inside of the two-dimensional region formed by the three line segments which connect points A, B, and C.
+--------------------------------------------------------------------------------------------------
+POINT copy_A = triangle.get_A();
+copy_A.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffcc3aa1a48. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffcc3aa1a48. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffcc3aa1a4c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+copy_A.set_X(33); // The setter method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is instantiated.
+copy_A.print(output); // The print method of the POINT class is public. Therefore, that method can be invoked from the program scope in which the POINT type variable copy_A is insstantiated.
+// COMMENTED OUT: triangle.A.get_X(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.get_Y(); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.set_X(25); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+// COMMENTED OUT: triangle.A.get_Y(666); // Note that this command can only be executed if the POINT type data member named A of a TRIANGLE instance is public.
+
+--------------------------------
+End Of Program
+--------------------------------
