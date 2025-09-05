@@ -1,0 +1,616 @@
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="noopener">single web page application</a> featured in this tutorial web page generates a randomized <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Julia_set" target="_blank" rel="noopener">Julia set</a> fractal image which the user can select the center point of by clicking on the screen as the animation zooms into the current center point for indefinitely many frames of the animation. The <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Fractal" target="_blank" rel="noopener">fractal</a> animation featured in this particular application utilizes <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/numbers/" target="_blank" rel="noopener">complex numbers</a> for determining the shape of each Julia set fractal which is generated.</span></p>
+<div style="background:#6e6e66;padding:10px;border-radius:5px;margin-top:10px;margin-bottom:10px">
+<p>Note that a live version of the <strong>JULIA_SET_FRACTAL_ANIMATION</strong> application is available to try using immediately from your current web browser at the following web address: <a style="background: #00ff00;color: #000000" href="https://karlinarayberinger.github.io/KARBYTES_BLOG_APPS_github_hosted_website/JULIA_SET_FRACTAL_ANIMATION/julia_set_fractal_animation.html" target="_blank" rel="noopener">https://karlinarayberinger.github.io/KARBYTES_BLOG_APPS_github_hosted_website/JULIA_SET_FRACTAL_ANIMATION/julia_set_fractal_animation.html</a></p>
+</div>
+<p><em>To view hidden text inside of the preformatted text boxes below, scroll horizontally.</em></p>
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Software Application Components</strong></p>
+<hr>
+<p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.html</a></p>
+<p>Cascading-Style-Sheet_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.css" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.css</a></p>
+<p>JavaScript_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.js</a></p>
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Hyper-Text-Markup-Language Code</strong></p>
+<hr>
+<p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the JULIA_SET_FRACTAL_ANIMATION web page application. Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>julia_set_fractal_animation.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file (and ensure that the JavaScript and Cascading-Style-Sheet files are in the same file directory as the HTML file).</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p><em><strong>If copy-pasting the following HTML code from the preformatted text box below into a text editor, remove the <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Zero-width_space" target="_blank" rel="noopener">zero-width space</a> Unicode character (<span style="background:#000000;color:#fe9eff">&amp;&#8203;#8203;</span>) which is located between the &#8216;s&#8217; and the &#8216;r&#8217; in the script tag(s) which each link to a <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a> file.</em></strong></p>
+<p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.html</a></p>
+<hr>
+<pre>
+&lt;!--
+/**
+ * file: julia_set_fractal_animation.html
+ * type: Hyper-Text-Markup-Language
+ * date: 12_JULY_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;JULIA_SET_FRACTAL_ANIMATION&lt;/title&gt;
+
+  &lt;!-- 
+  /** 
+   * The linked Cascading-Style-Sheet (CSS) file controls 
+   * the appearance of elements of this web page.
+   */
+  --&gt;
+  &lt;link rel="stylesheet" href="julia_set_fractal_animation.css"&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!--
+  /**
+   * The controls DIV element displays a button which the user can click on to reset the animation.
+   */
+  --&gt;
+  &lt;div id="controls"&gt;
+    &lt;button onclick="regenerateFractal()"&gt;Regenerate Julia Set&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!--
+  /**
+   * The info DIV element displays the following dynamically-updated text:
+   *
+   * c = [real part of c] + [imaginary part of c]i
+   *
+   * zoom = [current zoom level]
+   *
+   * center = ([x coordinate], [y coordinate])
+   */
+  --&gt;
+  &lt;div id="info"&gt;&lt;/div&gt;
+
+  &lt;!--
+  /**
+   * The canvas element displays a randomly-generated Julia set fractal which is zoomed into 
+   * for indefinitely many animation frames.
+   * 
+   * (Note that, after "very many" animation frames, the zoom value may exceed the 
+   * JavaScript floating-point number representation capacity (even though the animation
+   * can continue zooming in for an indefinitely long time period while the application window is 
+   * open).
+  --&gt;
+  &lt;canvas id="fractalCanvas"&gt;&lt;/canvas&gt;
+
+  &lt;!-- 
+  /**
+   * In order for the JavaScript file to be properly loaded by the web page application, 
+   * the script tag linking that JavaScript file to this HTML file must be placed at the bottom 
+   * of the body element of this web page.
+   */
+  --&gt;
+  &lt;script s&#8203;rc="julia_set_fractal_animation.js"&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Cascading-Style-Sheet Code</strong></p>
+<hr>
+<p>The following Cascading-Style-Sheet (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener">CSS</a>) code defines a stylesheet which customizes the appearance of interface components of the JULIA_SET_FRACTAL_ANIMATION web page application. Copy the CSS code from the preformatted text box below or from the source code file which is linked below into a text editor and save that file as <strong>julia_set_fractal_animation.css</strong>.</p>
+<p>Cascading-Style-Sheet_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.css" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.css</a></p>
+<hr>
+<pre>/**
+ * file: julia_set_fractal_animation.css
+ * type: Cascading-Style-Sheet
+ * date: 12_JULY_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+/***************************************************************
+ * Note that this Cascading-Style-Sheet file's contents can be 
+ * copy-pasted into a &lt;style&gt; element placed inside of the
+ * &lt;head&gt; element of julia_set_fractal.html
+ * (while replacing the link element which links to this file).
+ **************************************************************/
+
+/**
+ * Set the default margin and padding of the HTML and body elements to zero.
+ * 
+ * Set the background color to black and the text color to white to establish a high-contrast theme.
+ * 
+ * Use a monospace font for all body text to match the aesthetic of code or terminal-style output.
+ * 
+ * Hide any scrollbars and prevent content overflow by setting overflow to hidden,
+ * ensuring that the canvas fills the entire viewport without unintended scroll behavior.
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  color: white;
+  font-family: monospace;
+}
+
+/**
+ * Set the canvas element to display as a block-level element
+ * so that it does not introduce any unwanted inline spacing
+ * and can expand to fill its container without layout issues.
+ */
+canvas {
+  display: block;
+}
+
+/**
+ * Position the #controls container absolutely relative to the nearest positioned ancestor
+ * (in this case, the browser window) so that it remains fixed in place regardless of canvas rendering.
+ * 
+ * Offset the container 10 pixels from the top and 10 pixels from the left of the viewport.
+ * 
+ * Assign a z-index of 10 to ensure that the control panel appears above other page elements,
+ * such as the canvas, which may otherwise overlap it.
+ */   
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+/**
+ * Style the #info element, which displays live fractal parameters (e.g., c, zoom, center).
+ * 
+ * Position it absolutely so it stays fixed 50 pixels from the top and 10 pixels from the left of the viewport.
+ * 
+ * Assign a z-index of 10 to ensure it appears above the canvas.
+ * 
+ * Set a semi-transparent black background (rgba(0, 0, 0, 0.6)) for readability without fully obscuring the fractal.
+ * 
+ * Add internal padding (8 pixels vertically, 12 pixels horizontally) to create spacing around the text.
+ * 
+ * Apply a 5-pixel border-radius to slightly round the corners for a cleaner visual appearance.
+ */
+#info {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/**
+ * Style all &lt;button&gt; elements used in the interface.
+ * 
+ * Set the background color to a bright blue (#03a9f4) for high visibility.
+ * 
+ * Remove the default border for a cleaner and more relatively modern look.
+ * 
+ * Add padding (10-pixel vertical, 20-pixel horizontal) to enlarge the clickable area and improve usability.
+ * 
+ * Set the font size to 1em to maintain consistency with surrounding text.
+ * 
+ * Change the cursor to a pointer on hover to indicate interactivity.
+ * 
+ * Apply a 5-pixel border-radius to round the corners slightly for a softer, more polished appearance.
+ * 
+ * Set the text color to white for strong contrast against the blue background.
+ */
+button {
+  background-color: #03a9f4;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+</pre>
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION JavaScript Code</strong></p>
+<hr>
+<p>The following JavaScript (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JS</a>) code defines the functions which control the behavior of the JULIA_SET_FRACTAL_ANIMATION web page application. Copy the JS code from the preformatted text box below or from the source code file which is linked below into a text editor and save that file as <strong>julia_set_fractal_animation.js</strong>.</p>
+<p>JavaScript_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.js" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation.js</a></p>
+<hr>
+<pre>
+/**
+ * file: julia_set_fractal_animation.js
+ * type: JavaScript
+ * date: 12_JULY_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+/***************************************************************
+ * Note that this JavaScript file's contents can be 
+ * copy-pasted into a &lt;script&gt; element placed at the 
+ * bottom of the &lt;body&gt; element of julia_set_fractal.html
+ * (while replacing the script element which links to this file).
+ **************************************************************/
+
+// global program variables
+const canvas = document.getElementById("fractalCanvas");
+const ctx = canvas.getContext("2d");
+const info = document.getElementById("info");
+let width, height;
+
+/**
+ * This function resizes the canvas to fill the entire browser window and
+ * updates the global width and height variables to match the new canvas dimensions.
+ */
+function resizeCanvas() {
+  canvas.width = width = window.innerWidth;
+  canvas.height = height = window.innerHeight;
+}
+
+/**
+ * Attach the resizeCanvas() function to the "resize" event of the window object.
+ * 
+ * The window object represents the top-level browser environment which encapsulates the entire web page.
+ * 
+ * The addEventListener() method sets up a link between a specific event type (i.e. "resize")
+ * and a function to execute whenever that event occurs.
+ * 
+ * In this case, whenever the browser window is resized by the user,
+ * the browser will automatically invoke the resizeCanvas() function in response.
+ */
+window.addEventListener("resize", resizeCanvas);
+
+/**
+ * Call the resizeCanvas() function immediately after the web page is loaded by the web browser
+ * so that the canvas matches the current dimensions of the browser window before any drawing begins.
+ */
+resizeCanvas(); 
+
+/**
+ * Declare a variable named config and initialize it as an empty object.
+ * 
+ * This object will later store the parameters which define the current Julia set,
+ * such as the complex constant c, color palette, zoom rate, and max iteration count.
+ */
+let config = {};
+
+/**
+ * Initialize the zoom level to 1 (i.e. no magnification).
+ * 
+ * This value will be progressively increased to create the 
+ * visual effect of continuous zooming into the fractal.
+ */
+let zoom = 1;
+
+/**
+ * Define the initial center point of the zoomed fractal in terms of complex-plane coordinates,
+ * where (x: 0.0, y: 0.0) corresponds to the center of the canvas in pixel space.
+ * 
+ * Each pixel on the canvas will be mapped to a point in the complex plane relative to this center,
+ * allowing the fractal to be drawn and zoomed around this focal point.
+ */
+let center = { x: 0.0, y: 0.0 };
+
+/**
+ * Declare a variable named targetCenter and assign it the initial complex-plane coordinate (0.0, 0.0).
+ * 
+ * This variable represents the point toward which the fractal’s zoom center (i.e., the center variable)
+ * will gradually interpolate over successive animation frames until center and targetCenter are approximately equal.
+ * 
+ * When the user clicks on the canvas, targetCenter is updated to reflect the complex-plane coordinate
+ * corresponding to the clicked pixel location (based on the current zoom level and center).
+ * 
+ * The center variable will then incrementally approach targetCenter
+ * to produce a relatively smooth zoom-pan effect.
+ */
+let targetCenter = { x: 0.0, y: 0.0 };
+
+/**
+ * Declare a variable named easingFactor and assign it the value 0.05.
+ * 
+ * This value determines the rate at which the center variable 
+ * interpolates toward targetCenter during each animation frame. 
+ * 
+ * A smaller easingFactor results in slower, smoother transitions,
+ * while a larger value makes the zoom center move more quickly (but potentially less smoothly)
+ * toward the clicked target point in the complex plane.
+ */
+let easingFactor = 0.05; 
+
+/**
+ * Define a function named generateRandomConfig() which returns a new object literal
+ * whose properties determine how the next Julia set fractal will be computed and displayed.
+ * 
+ * The returned object contains the following key-value pairs:
+ * 
+ * - c: An object representing a randomly selected complex constant (c = re + i·im),
+ *      where both the real (re) and imaginary (im) components are floating-point numbers
+ *      uniformly distributed within the interval [-1.0, 1.0]. This value defines the
+ *      specific Julia set to render.
+ * 
+ * - maxIter: A randomly selected integer between 50 and 149 (inclusive),
+ *       specifying the maximum number of iterations to perform for each point in the complex plane
+ *       before deciding whether that point escapes to infinity.
+ * 
+ * - zoomRate: A floating-point value between approximately 1.01 and 1.03 which determines
+ *      how quickly the fractal zooms in with each successive animation frame.
+ * 
+ * - palette: An object specifying a randomly generated RGB color palette.
+ *      Each color channel (r, g, b) is a floating-point number between 0 and 255.
+ *      This palette is used to colorize points based on how many iterations they undergo
+ *      before escaping the bounded region.
+ */
+function generateRandomConfig() {
+  return {
+    c: {
+      re: -1 + 2 * Math.random(),
+      im: -1 + 2 * Math.random()
+    },
+    maxIter: Math.floor(50 + Math.random() * 100),
+    zoomRate: 1.01 + Math.random() * 0.02,
+    palette: {
+      r: Math.random() * 255,
+      g: Math.random() * 255,
+      b: Math.random() * 255
+    }
+  };
+}
+
+/**
+ * Define a function named regenerateFractal() which resets the fractal configuration
+ * and restarts the zoom animation with a newly randomized Julia set.
+ *
+ * This function performs the following operations:
+ *
+ * - Assigns a new randomly generated configuration object (including a new complex constant c,
+ *   iteration limit, zoom rate, and color palette) to the global config variable.
+ *
+ * - Resets the zoom level to 1 (i.e. no magnification).
+ *
+ * - Resets both the center and targetCenter coordinates to (0.0, 0.0) in complex-plane space,
+ *   ensuring that the initial focal point is centered at the origin.
+ *
+ * - Invokes the draw() function to begin rendering and continuously animating
+ *   the newly generated Julia set.
+ */
+function regenerateFractal() {
+  config = generateRandomConfig();
+  zoom = 1;
+  center = targetCenter = { x: 0.0, y: 0.0 };
+  draw();
+}
+
+/**
+ * Register an event listener on the canvas element which responds to "click" events.
+ * 
+ * When the user clicks on the canvas:
+ * 
+ * - Determine the pixel coordinates (px, py) of the mouse click relative to the canvas
+ *   (and the canvas is visually depicted as a rectangular grid of pixels).
+ * 
+ * - Convert those pixel coordinates into a corresponding point (clickedX, clickedY)
+ *   in the complex plane by accounting for the current zoom level, canvas dimensions,
+ *   and center position.
+ * 
+ * - The scale factor (1.5) ensures the complex plane is normalized to fit within
+ *   the visible canvas area, matching the coordinate system used for rendering the fractal.
+ * 
+ * - Update the targetCenter variable to the complex-plane coordinate corresponding to the click,
+ *   so that the fractal zoom center will begin transitioning relatively smoothly towards that point
+ *   on subsequent animation frames.
+ */
+canvas.addEventListener("click", function (e) {
+  const rect = canvas.getBoundingClientRect();
+  const px = e.clientX - rect.left;
+  const py = e.clientY - rect.top;
+  const scale = 1.5;
+  const clickedX = scale * (px - width / 2) / (0.5 * zoom * width) + center.x;
+  const clickedY = scale * (py - height / 2) / (0.5 * zoom * height) + center.y;
+  targetCenter = { x: clickedX, y: clickedY };
+});
+
+/**
+ * Define a function named juliaColor() which determines the RGB (Red-Green-Blue) color
+ * to assign to a given complex-plane coordinate (x, y) based on how that point behaves
+ * under iteration of the Julia set function: zₙ₊₁ = zₙ² + c.
+ *
+ * Parameters:
+ * 
+ * - x: the real part of the initial complex number z₀.
+ * 
+ * - y: the imaginary part of the initial complex number z₀.
+ *
+ * The function performs the following operations:
+ * 
+ * - Initialize zx and zy to the input (x, y), representing the current z-value.
+ * 
+ * - Extract the maximum iteration count (maxIter) and the real and imaginary parts
+ *   of the constant complex parameter c from the global config object.
+ * 
+ * - Iteratively apply the Julia set formula, tracking how many iterations it takes
+ *   for the magnitude of z (i.e. sqrt(zx² + zy²)) to exceed 2.
+ * 
+ * - If the point never escapes within maxIter steps, return solid black [0, 0, 0],
+ *   indicating that the point is likely within the filled-in Julia set.
+ * 
+ * - Otherwise, return a color derived from the escape time ratio (t = iter / maxIter),
+ *   linearly scaled across the RGB color palette defined in the config.
+ */
+function juliaColor(x, y) {
+  let zx = x;
+  let zy = y;
+  let iter = 0;
+  const maxIter = config.maxIter;
+  const cx = config.c.re;
+  const cy = config.c.im;
+  while (zx * zx + zy * zy &lt; 4 &amp;&amp; iter &lt; maxIter) {
+    let xtemp = zx * zx - zy * zy + cx;
+    zy = 2 * zx * zy + cy;
+    zx = xtemp;
+    iter++;
+  }
+  if (iter === maxIter) return [0, 0, 0];
+  const t = iter / maxIter;
+  return [
+    Math.floor(t * config.palette.r),
+    Math.floor(t * config.palette.g),
+    Math.floor(t * config.palette.b)
+  ];
+}
+
+/**
+ * Define a function named drawFractal() which renders the current frame of the Julia set
+ * onto the HTML canvas element using the current configuration settings (zoom level, center point, palette, etc.).
+ * 
+ * The function performs the following operations:
+ * 
+ * - Create a new ImageData object named image with the same dimensions as the canvas.
+ * 
+ * - Set a constant scale factor (1.5) which defines the size of the visible complex-plane region.
+ * 
+ * - For each pixel (px, py) in the canvas:
+ * 
+ *   ~ Convert the pixel coordinate to its corresponding complex-plane coordinate (x, y)
+ *     by accounting for the current zoom level and the center offset.
+ * 
+ *   ~ Evaluate the juliaColor(x, y) function to determine the RGB color for the corresponding
+ *     complex-plane point.
+ * 
+ *   ~ Compute the index of the current pixel in the 1-dimensional image.data array and assign the RGB
+ *     values and an alpha value of 255 (fully opaque) to the respective entries.
+ * 
+ * - After all pixels have been updated, use ctx.putImageData() to draw the completed image onto the canvas.
+ */
+function drawFractal() {
+  const image = ctx.createImageData(width, height);
+  const zoomed = zoom;
+  const scale = 1.5;
+  for (let px = 0; px &lt; width; px++) {
+    for (let py = 0; py &lt; height; py++) {
+      const x = scale * (px - width / 2) / (0.5 * zoomed * width) + center.x;
+      const y = scale * (py - height / 2) / (0.5 * zoomed * height) + center.y;
+      const [r, g, b] = juliaColor(x, y);
+      const index = (py * width + px) * 4;
+      image.data[index] = r;
+      image.data[index + 1] = g;
+      image.data[index + 2] = b;
+      image.data[index + 3] = 255;
+    }
+  }
+  ctx.putImageData(image, 0, 0);
+}
+
+/**
+ * Define a function named interpolate() which performs linear interpolation between two values.
+ * 
+ * Parameters:
+ *
+ * - current: the starting value (e.g., the current position or zoom level).
+ *
+ * - target: the destination value toward which current should move.
+ * 
+ * - factor: a number between 0 and 1 representing how far to move toward the target
+ *           (e.g. 0.05 means move 5% of the remaining distance).
+ * 
+ * The function returns a value that is proportionally closer to target than current was,
+ * allowing for relatively smooth transitions over successive animation frames.
+ */
+function interpolate(current, target, factor) {
+  return current + (target - current) * factor;
+}
+
+/**
+ * Define the draw() function which is repeatedly called to render each animation frame
+ * of the zooming Julia set visualization.
+ * 
+ * This function performs the following steps:
+ * 
+ * - Smoothly (as possible digitally) update the center coordinates by interpolating between the current center
+ *   and the targetCenter using the easingFactor. This creates a (relatively) smooth panning effect
+ *   as the "camera" gradually shifts toward the user-selected location in the complex plane.
+ * 
+ * - Invoke drawFractal() to render the current state of the fractal onto the canvas
+ *   based on the current center, zoom level, and fractal configuration.
+ * 
+ * - Incrementally increase the zoom level by multiplying it by the zoomRate factor
+ *   specified in the config object, creating the effect of "continuous" zooming into the fractal.
+ * 
+ * - Update the onscreen informational text to reflect the current center coordinates,
+ *   zoom level, and complex constant c.
+ * 
+ * - Use requestAnimationFrame(draw) to schedule the next animation frame,
+ *   ensuring the draw() function is called again as soon as the browser is ready to repaint.
+ */
+function draw() {
+  center.x = interpolate(center.x, targetCenter.x, easingFactor);
+  center.y = interpolate(center.y, targetCenter.y, easingFactor);
+  drawFractal();
+  zoom *= config.zoomRate;
+  updateInfo();
+  requestAnimationFrame(draw);
+}
+
+/**
+ * Define a function named updateInfo() which updates the contents of the onscreen info panel
+ * to reflect the current state of the fractal rendering parameters.
+ * 
+ * This function sets the innerText of the HTML element named info to display:
+ *  
+ * - The current value of the complex constant c (formatted as "a + bi"),
+ *   where a = config.c.re and b = config.c.im, each rounded to 5 decimal places.
+ * 
+ * - The current zoom level, rounded to 3 decimal places.
+ * 
+ * - The current center coordinates (x, y) of the view in complex-plane space,
+ *   each rounded to 5 decimal places.
+ * 
+ * This live-updating panel helps the user understand the current position and zoom depth
+ * of the fractal view and the specific Julia set being visualized.
+ */
+function updateInfo() {
+  info.innerText =
+  `c = ${config.c.re.toFixed(5)} + ${config.c.im.toFixed(5)}i\n` +
+  `zoom = ${zoom.toFixed(3)}\n` +
+  `center = (${center.x.toFixed(5)}, ${center.y.toFixed(5)})`;
+}
+
+/**
+ * Immediately invoke regenerateFractal() to initialize the fractal visualization.
+ * 
+ * This sets up a random configuration (complex constant, color palette, etc.),
+ * resets the zoom and center coordinates, and begins rendering the initial frame.
+ */
+regenerateFractal();
+</pre>
+<hr>
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Interface (screenshot at 29.593 zoom)</strong></p>
+<hr>
+<p>The following is the first of three screenshot images successively taken of a randomly generated fractal being zoomed into.</p>
+<p>image_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p0.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p0.png</a></p>
+<hr>
+
+
+<figure class="wp-block-image size-full"><img data-attachment-id="47421" data-permalink="https://karbytesforlifeblog.wordpress.com/julia_set_fractal_animation/julia_set_fractal_animation_screenshot_p0/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png" data-orig-size="1300,612" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="julia_set_fractal_animation_screenshot_p0" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=300" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=1000" width="1300" height="612" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png" alt="" class="wp-image-47421" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png 1300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=150&amp;h=71 150w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=300&amp;h=141 300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=768&amp;h=362 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p0.png?w=1024&amp;h=482 1024w" sizes="(max-width: 1300px) 100vw, 1300px" /></figure>
+
+
+<hr />
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Interface (screenshot at 193.268 zoom)</strong></p>
+<hr />
+<p>The following is the second of three screenshot images successively taken of a randomly generated fractal being zoomed into.</p>
+<p>image_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p1.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p1.png</a></p>
+<hr />
+
+
+<figure class="wp-block-image size-full"><img data-attachment-id="47426" data-permalink="https://karbytesforlifeblog.wordpress.com/julia_set_fractal_animation/julia_set_fractal_animation_screenshot_p1/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png" data-orig-size="1300,612" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="julia_set_fractal_animation_screenshot_p1" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=300" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=1000" width="1300" height="612" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png" alt="" class="wp-image-47426" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png 1300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=150&amp;h=71 150w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=300&amp;h=141 300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=768&amp;h=362 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p1.png?w=1024&amp;h=482 1024w" sizes="(max-width: 1300px) 100vw, 1300px" /></figure>
+
+
+<hr />
+<p><strong>JULIA_SET_FRACTAL_ANIMATION Interface (screenshot at 3152234.580 zoom)</strong></p>
+<hr />
+<p>The following is the third of three screenshot images successively taken of a randomly generated fractal being zoomed into.</p>
+<p>image_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p2.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_45/main/julia_set_fractal_animation_screenshot_p2.png</a></p>
+<hr />
+
+<figure class="wp-block-image size-full"><img data-attachment-id="47430" data-permalink="https://karbytesforlifeblog.wordpress.com/julia_set_fractal_animation/julia_set_fractal_animation_screenshot_p2/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png" data-orig-size="1300,612" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="julia_set_fractal_animation_screenshot_p2" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=300" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=1000" width="1300" height="612" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png" alt="" class="wp-image-47430" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png 1300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=150&amp;h=71 150w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=300&amp;h=141 300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=768&amp;h=362 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/julia_set_fractal_animation_screenshot_p2.png?w=1024&amp;h=482 1024w" sizes="(max-width: 1300px) 100vw, 1300px" /></figure>
+
+<hr />
+<p>This web page was last updated on 12_JULY_2025. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />

@@ -1,0 +1,88 @@
+<hr>
+<p><strong>MP4_TO_MP3_CONVERTER</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener">Python</a> program featured in this tutorial converts an <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP4_file_format" target="_blank" rel="noopener">MP4</a> video file to an <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP3" target="_blank" rel="noopener">MP3</a> audio file (which essentially amounts to isolating the sound track component of the input video file from the moving pictures component). Like the Python program whose Uniform Resource Locator is displayed below, the Python program featured on this web page uses Python modules which are downloaded and installed on the local machine which executes that Python program.</span></p>
+<p><span style="background:#00ffff">If you would like to shrink an MP4 file to a smaller size, you can use the Python program featured on the tutorial web page at the following Uniform Resource Locator:</span></p>
+<p><a style="background:#000000;color:#00ff00" href="https://karbytesforlifeblog.wordpress.com/mp4_video_compressor/" target="_blank" rel="noopener">https://karbytesforlifeblog.wordpress.com/mp4_video_compressor/</a></p>
+<p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
+<hr>
+<p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
+<hr>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/mp4_to_mp3.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/mp4_to_mp3.py</a></p>
+<hr>
+<p><strong>PROGRAM_INTERPRETATION_AND_EXECUTION</strong></p>
+<hr>
+<p>STEP_0: Copy and paste the Python <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/mp4_to_mp3.py" target="_blank" rel="noopener">source code</a> into a new text editor document and save that document as the following file name:</p>
+<pre>mp4_to_mp3.py</pre>
+<p>STEP_1: Install <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Pip_(package_manager)" target="_blank" rel="noopener">pip</a> (which, for karbytes, required using a <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Virtual_environment" target="_blank" rel="noopener">virtual environment</a> in which to install and run pip-installed Python modules) using the following <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener">Unix</a> commands.</p>
+<p><em>(The purpose of the virtual environment is to prevent conflicts which may arise from different processes using the same computing resources. In this case, the virtual environment enables the user to manage pip-installed packages independently of the system Python environment).</em></p>
+<p><em>(Note also that installing the virtual environment automatically installs pip with it).</em></p>
+<p>1.0: Create the virtual environment:</p>
+<pre>python3 -m venv myenv</pre>
+<p>1.1: Activate the virtual environment:</p>
+<pre>source myenv/bin/activate</pre>
+<p>1.2: Install <a style="background:#ff9000;color:#000000" href="https://pypi.org/project/moviepy/" target="_blank" rel="noopener">MoviePy</a> within the Virtual Environment:</p>
+<pre>pip install moviepy</pre>
+<p>1.3: Use the Virtual Environment:</p>
+<p>While the virtual environment is active, any Python commands will use the packages installed in myenv. To deactivate the virtual environment, use the following command:</p>
+<pre>deactivate</pre>
+<p>STEP_2: While the virtual environment is active, set the current directory to wherever the Python program file is located on the local machine (e.g. Desktop).</p>
+<pre>cd Desktop</pre>
+<p>STEP_3: Run the program by entering the following command:</p>
+<pre>python3 mp4_to_mp3.py</pre>
+<p>STEP_4: If the program interpretation command does not work, then use the following commands (in top-down order) to install the Python interpreter:</p>
+<pre>sudo apt update</pre>
+<pre>sudo apt install python3</pre>
+<p>STEP_5: Observe program results in the file directory where the input video file is located. The program should have created a folder there named output (if that folder did not exist there already) and generated the output file inside of that folder.</p>
+<hr>
+<p><strong>PROGRAM_SOURCE_CODE</strong></p>
+<hr>
+<p>Note that the text inside of each of the the preformatted text boxes below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Web_browser" target="_blank" rel="noopener">web browser</a>) to be identical to the content of that preformatted text box text&#8217;s respective <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain-text</a> file or <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Source_code" target="_blank" rel="noopener">source code</a> output file (whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed as the <strong style="background:#000000;color:#00ff00">green</strong> <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> immediately above that preformatted text box (if that hyperlink points to a <strong>source code file</strong>) or whose Uniform Resource Locator is displayed as the <strong style="background:#000000;color:#ff9000">orange</strong> hyperlink immediately above that preformatted text box (if that hyperlink points to a <strong>plain-text file</strong>)).</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/mp4_to_mp3.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/mp4_to_mp3.py</a></p>
+<hr>
+<pre>
+#########################################################################################
+# file: mp4_to_mp3.py
+# type: Python
+# date: 01_NOVEMBER_2024
+# author: karbytes
+# license: PUBLIC_DOMAIN 
+#########################################################################################
+from moviepy.editor import VideoFileClip
+import os
+
+def mp4_to_mp3(input_file, output_folder="output"):
+    # Check if input file exists and is an MP4
+    if not os.path.isfile(input_file) or not input_file.endswith('.mp4'):
+        print("Please provide a valid MP4 file.")
+        return
+
+    # Create output folder if it doesn't exist
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+
+    # Extract base filename without extension
+    base_filename = os.path.splitext(os.path.basename(input_file))[0]
+    output_file = os.path.join(output_folder, f"{base_filename}.mp3")
+
+    # Load the video file and extract audio
+    try:
+        video_clip = VideoFileClip(input_file)
+        audio_clip = video_clip.audio
+        audio_clip.write_audiofile(output_file)
+        print(f"Successfully converted {input_file} to {output_file}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        # Release resources
+        video_clip.close()
+        if audio_clip:
+            audio_clip.close()
+
+input_mp4 = "input_video.mp4"  # Replace with your MP4 file path
+mp4_to_mp3(input_mp4)
+</pre>
+<hr>
+<p>This web page was last updated on 07_NOVEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr>

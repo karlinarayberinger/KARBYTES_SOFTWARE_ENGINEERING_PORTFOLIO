@@ -1,0 +1,355 @@
+<hr>
+<p><strong>GEOMETRIC_KALEIDOSCOPE_MORPH</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Single-page_application" target="_blank" rel="noopener">single web page application</a> featured in this tutorial web page generates a randomized <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Kaleidoscope" target="_blank" rel="noopener">kaleidoscope</a>-like animation which plays continuously (in a looping manner) for indefinitely many cycles. Essentially, the animation consists of multicolored (and semi-transparent) squares and regular triangles spinning counterclockwise around their own centers and orbitting some external point on the canvas (which is colored black for contrast).</span></p>
+<div style="background:#6e6e66;padding:10px;border-radius:5px;margin-top:10px;margin-bottom:10px">
+<p>Note that a live version of the <strong>GEOMETRIC_KALEIDOSCOPE_MORPH</strong> application is available to try using immediately from your current web browser at the following web address: <a style="background: #00ff00;color: #000000" href="https://karlinarayberinger.github.io/KARBYTES_BLOG_APPS_github_hosted_website/GEOMETRIC_KALEIDOSCOPE_MORPH/geometric_kaleidoscope_morph.html" target="_blank" rel="noopener">https://karlinarayberinger.github.io/KARBYTES_BLOG_APPS_github_hosted_website/GEOMETRIC_KALEIDOSCOPE_MORPH/geometric_kaleidoscope_morph.html</a></p>
+</div>
+<p>(For information on how this JavaScript application came to be, visit the following plain-text web page: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/chatgpt_karbytes_20july2025_p0.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/chatgpt_karbytes_20july2025_p0.txt</a>).</p>
+<p><em>To view hidden text inside of the preformatted text boxes below, scroll horizontally.</em></p>
+<hr>
+<p><strong>GEOMETRIC_KALEIDOSCOPE_MORPH Software Application Components</strong></p>
+<hr>
+<p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph.html</a></p>
+<hr>
+<p><strong>GEOMETRIC_KALEIDOSCOPE_MORPH Hyper-Text-Markup-Language Code</strong></p>
+<hr>
+<p>The following Hyper-Text-Markup-Language (<a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a>) code defines the user interface component of the GEOMETRIC_KALEIDOSCOPE_MORPH web page application (and also contains all the <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener">CSS</a> code and <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a> code needed to run this application).</p>
+<p>Copy the HTML code from the source code file which is linked below into a text editor and save that file as <strong>geometric_kaleidoscope_morph.html</strong>. Use a web browser such as <a style="background: #ff9000;color: #000000" href="https://en.wikipedia.org/wiki/Firefox" target="_blank" rel="noopener">Firefox</a> to open that HTML file.</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p>Hyper-Text-Markup-Language_file: <a style="background: #000000;color: #00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph.html" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph.html</a></p>
+<hr>
+<pre>
+&lt;!--
+  /**
+   * file: geometric_kaleidoscope_morph.html
+   * type: Hyper-Text-Markup-Language
+   * date: 21_JULY_2025
+   * author: karbytes
+   * license: PUBLIC_DOMAIN
+   */
+--&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Geometric Kaleidoscope Morph&lt;/title&gt;
+  &lt;style&gt;
+  /**
+   * Eliminate all default spacing around the edges of the web page and prevent scrollbars from appearing.
+   * Set the background color of the entire viewport to solid black to provide high contrast for colorful animations. 
+   */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+  }
+  /**
+   * Ensure the canvas element takes up the full width of the page and behaves like a block-level element,
+   * allowing it to occupy all available space without unexpected gaps. 
+   */
+  canvas {
+    display: block;
+  }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;canvas id="canvas"&gt;&lt;/canvas&gt;
+  &lt;script&gt;
+    // Retrieve the canvas element from the HTML document using its unique ID ("canvas").
+    // Obtain the 2D rendering context ("ctx") associated with the canvas to enable drawing operations using standard vector graphics functions.
+    // Declare the width and height variables which will later store the current pixel dimensions of the canvas for dynamic layout and scaling calculations.
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    let width, height;
+
+    // Define a resize() function which dynamically sets the canvas dimensions to match the current size of the browser window.
+    // This ensures that the visual display fills the entire viewport without scrollbars or clipping artifacts.
+    // Attach the resize() function to the window's resize event listener to automatically adjust the canvas when the user resizes the window.
+    // Immediately invoke resize() once at the beginning of the program to initialize the canvas to the correct size.
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resize);
+    resize();
+
+    // NUM_SECTORS defines the number of radial symmetry divisions used to mirror shape patterns,
+    // creating a kaleidoscopic visual effect with rotational and reflective repetition.
+    // SHAPE_COUNT determines how many unique polygonal shapes will be animated per sector.
+    // The shapes array is initialized as empty and will later store the randomly generated shape data.
+    const NUM_SECTORS = 16;
+    const SHAPE_COUNT = 60;
+    const shapes = [];
+
+    // Define a set of vivid base colors (cyan, magenta, yellow, green, red, indigo, and orange).
+    // These hexadecimal values serve as the core palette from which randomized shades are generated
+    // to produce dynamic and visually striking polygonal patterns against a black canvas.
+    const BASE_COLORS = [
+      '#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0000', '#4b0082', '#ff8000'
+    ];
+
+    /**
+     * Define a function named randomShade which takes a hexadecimal color string (baseHex)
+     * as input and returns a randomly adjusted shade of that color as a semi-transparent RGBA string.
+     * 
+     * The input string is expected to follow the format "#RRGGBB", where RR, GG, and BB
+     * are two-digit hexadecimal values corresponding to the red, green, and blue channels respectively.
+     * 
+     * The parseInt(baseHex.slice(1), 16) expression converts the hex string into an integer.
+     * Bitwise operations extract the red (r), green (g), and blue (b) components from that integer.
+     * 
+     * Each color channel is then modified by a random offset in the range [-20, 20] using:
+     * Math.floor(Math.random() * 40 - 20)
+     * 
+     * The result of each offset is clamped between 0 and 255 to stay within valid RGB bounds
+     * using Math.max(0, Math.min(255, value)).
+     * 
+     * A random opacity value between 0.5 and 1.0 is generated and appended as the alpha (a) channel.
+     * 
+     * The returned string is of the format:
+     * "rgba(R, G, B, A)"
+     * 
+     * This function introduces subtle variety in color and opacity to create a more organic and
+     * layered visual effect when filling shapes in the canvas animation.
+     */
+    function randomShade(baseHex) {
+      const color = parseInt(baseHex.slice(1), 16);
+      const r = ((color &gt;&gt; 16) &amp; 0xFF) + Math.floor(Math.random() * 40 - 20);
+      const g = ((color &gt;&gt; 8) &amp; 0xFF) + Math.floor(Math.random() * 40 - 20);
+      const b = (color &amp; 0xFF) + Math.floor(Math.random() * 40 - 20);
+      return `rgba(${Math.max(0, Math.min(255, r))}, ${Math.max(0, Math.min(255, g))}, ${Math.max(0, Math.min(255, b))}, ${Math.random() * 0.5 + 0.5})`;
+    }
+
+    /**
+     * Define a function named createShape which returns a JavaScript object literal
+     * encoding the attributes of a geometric shape to be rendered in the kaleidoscope animation.
+     * 
+     * (When pointCount is 3, the shape is a triangle.)
+     * 
+     * (When pointCount is 4, the shape is a square (specifically, a regular quadrilateral)).
+     * 
+     * Each shape object includes the following key-value pairs:
+     * 
+     * - baseX: The initial horizontal coordinate (in pixels) of the shape’s orbit center,
+     *   chosen uniformly at random within the right half of the canvas viewport.
+     * 
+     * - baseY: The initial vertical coordinate (in pixels) of the shape’s orbit center,
+     *   chosen uniformly at random within the bottom half of the canvas viewport.
+     * 
+     * - angleOffset: A random angle in the interval [0, 2π) which determines the initial
+     *   phase of the shape’s orbit trajectory.
+     * 
+     * - size: The radius of the shape in pixels (i.e. the distance from the shape’s center to a vertex),
+     *   randomly selected from the interval [20, 60).
+     * 
+     * - speed: A small angular velocity value determining how fast the shape moves
+     *   along its circular orbit path, chosen randomly from the interval [0.001, 0.003).
+     * 
+     * - orbitRadius: The radius of the circular path along which the shape’s center moves,
+     *   randomly selected from the interval [20, 120).
+     * 
+     * - color: A semi-transparent RGBA color string chosen by first randomly selecting a base color
+     *   from the BASE_COLORS array and then passing it into the randomShade() function to introduce
+     *   subtle variation in hue and opacity.
+     * 
+     * - pointCount: An integer value representing the number of vertices used to construct
+     *   the polygonal shape (i.e. 3 or 4, chosen with equal probability).
+     * 
+     * This function is called once for each shape to populate the shapes array,
+     * enabling a dynamic and diverse set of morphing polygons that move with independent speeds,
+     * sizes, orientations, and colors in the kaleidoscopic animation.
+     */
+    function createShape() {
+      return {
+        baseX: Math.random() * width / 2,
+        baseY: Math.random() * height / 2,
+        angleOffset: Math.random() * Math.PI * 2,
+        size: Math.random() * 40 + 20,
+        speed: Math.random() * 0.002 + 0.001,
+        orbitRadius: Math.random() * 100 + 20,
+        color: randomShade(BASE_COLORS[Math.floor(Math.random() * BASE_COLORS.length)]),
+        pointCount: Math.floor(Math.random() * 2) + 3
+      };
+    }
+
+    // Populate the shapes array with SHAPE_COUNT distinct shape objects.
+    // Each shape is initialized with randomized attributes such as position, size,
+    // color, angular offset, orbit radius, and number of polygonal sides.
+    // This loop sets up the foundational data for the animated geometric pattern.
+    for (let i = 0; i &lt; SHAPE_COUNT; i++) {
+      shapes.push(createShape());
+    }
+
+    /**
+     * Define a function named drawRegularPolygonwhich draws a regular polygon
+     * (either a triangle or else a quadrilateral) centered at the point (x, y) on the canvas.
+     * 
+     * Parameters:
+     * 
+     * - x: The horizontal coordinate (in pixels) of the polygon's center.
+     * 
+     * - y: The vertical coordinate (in pixels) of the polygon's center.
+     * 
+     * - size: The radius (in pixels) from the center to each vertex of the polygon.
+     * 
+     * - angle: The rotation angle (in radians) applied to the entire polygon (with the
+     *   premise being that the polygon rotates around its center counterclockwise).
+     * 
+     * - points: The number of vertices the polygon should have (e.g. 3 for triangle, 4 for square).
+     * 
+     * The function begins by invoking ctx.beginPath() to start a new drawing path.
+     * 
+     * Then, for each vertex index i in the interval [0, points):
+     * 
+     * - theta is computed as the angle offset for that vertex (i.e. equally spaced around the circle).
+     * 
+     * - (px, py) is computed as the Cartesian coordinate of the vertex,
+     *   using polar-to-Cartesian conversion relative to the polygon’s center.
+     * 
+     * The first vertex is set as the starting point of the path using ctx.moveTo(),
+     * and all subsequent vertices are connected using ctx.lineTo().
+     * 
+     * Once all vertices have been specified, ctx.closePath() connects the final vertex
+     * back to the starting point to complete the polygon.
+     * 
+     * Finally, ctx.fill() fills the polygon using the current fillStyle (color and opacity).
+     * 
+     * This function provides the geometric foundation for rendering the symmetric, colorful,
+     * rotationally animated triangular patterns used in the kaleidoscope visual.
+     */
+    function drawRegularPolygon(x, y, size, angle, points) {
+      ctx.beginPath();
+      for (let i = 0; i &lt; points; i++) {
+        const theta = angle + (i * 2 * Math.PI) / points;
+        const px = x + size * Math.cos(theta);
+        const py = y + size * Math.sin(theta);
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    /**
+     * Define a function named drawShape which renders a single polygonal shape
+     * (e.g. triangle or quadrilateral) onto the canvas at a position determined
+     * by the animation time and the shape’s individual motion parameters.
+     * 
+     * Parameters:
+     * 
+     * - shape: An object literal specifying the geometric and dynamic properties
+     *   of the shape to be rendered (as returned by createShape()).
+     * 
+     * - t: The current timestamp (the time value passed into the animation loop),
+     *   used to determine the phase of the shape's orbit path; a scalar quantity 
+     *   indicating the number of milliseconds elapsed since the animation started.
+     * 
+     * The function computes the shape’s current angle `a` by multiplying
+     * the elapsed time `t` by the shape’s angular velocity `shape.speed`.
+     * 
+     * The horizontal (x) and vertical (y) coordinates of the shape’s center are computed
+     * using parametric circular motion equations. The result is that the shape orbits
+     * around its base point (`baseX`, `baseY`) at a constant radius and speed,
+     * with an initial phase offset (`angleOffset`) to introduce asymmetry between shapes.
+     * 
+     * The fillStyle of the canvas context is set to the shape’s assigned RGBA color,
+     * which may vary in both hue and transparency.
+     * 
+     * The function then invokes drawRegularPolygon() to render the actual geometry
+     * of the shape (e.g. triangle, square) at the computed position and angle.
+     * 
+     * This function encapsulates how a shape "animates" over time by rotating around
+     * its origin point, changing orientation, and appearing in one or more mirrored sectors
+     * as part of the kaleidoscopic rendering process.
+     */
+    function drawShape(shape, t) {
+      const a = t * shape.speed;
+      const x = shape.baseX + Math.cos(a + shape.angleOffset) * shape.orbitRadius;
+      const y = shape.baseY + Math.sin(a + shape.angleOffset) * shape.orbitRadius;
+      ctx.fillStyle = shape.color;
+      drawRegularPolygon(x, y, shape.size, a, shape.pointCount);
+    }
+
+    /**
+     * Define a function named render which is repeatedly invoked by the web browser’s
+     * animation scheduler (via requestAnimationFrame) to draw each new frame of the
+     * kaleidoscopic animation sequence.
+     * 
+     * Parameter:
+     * 
+     * - time: The current animation timestamp in milliseconds (automatically provided
+     *   by requestAnimationFrame) which serves as the dynamic input for computing shape
+     *   positions and orientations.
+     * 
+     * (The position of a shape refers to where its center (x,y) is located on the canvas).
+     * 
+     * (The orientation of a shape refers to how it is rotated (angle) around its own center point).
+     * 
+     * The function begins by clearing the entire canvas to prepare it for the next frame.
+     * 
+     * The drawing context is then translated such that the origin (0, 0) aligns with the
+     * center of the canvas viewport. This ensures that rotational symmetry operations
+     * radiate outward from the center.
+     * 
+     * A for-loop iterates NUM_SECTORS times to create a rotationally symmetric pattern.
+     * 
+     * For each sector index s:
+     * 
+     * - The context is rotated by an angle of (s × 2π) ÷ NUM_SECTORS radians to orient
+     *   the drawing region toward the appropriate slice of the circle.
+     * 
+     * - If the sector index is odd, the context is flipped vertically (reflected across the x-axis)
+     *   to create a mirrored pattern effect between adjacent sectors.
+     * 
+     * - Each shape in the shapes array is rendered by invoking drawShape() with the current
+     *   timestamp to compute the shape’s dynamic position and rotation.
+     * 
+     * After drawing all shapes for a given sector, the context state is restored to undo
+     * that sector’s transformations before moving on to the next one.
+     * 
+     * Once all sectors have been rendered, the outer transformation is undone.
+     * 
+     * Finally, requestAnimationFrame(render) schedules the render function to be
+     * called again for the next animation frame, enabling continuous animation.
+     */
+    function render(time) {
+      ctx.clearRect(0, 0, width, height);
+      ctx.save();
+      ctx.translate(width / 2, height / 2);
+
+      for (let s = 0; s &lt; NUM_SECTORS; s++) {
+        ctx.save();
+        ctx.rotate((s * Math.PI * 2) / NUM_SECTORS);
+        if (s % 2 === 1) ctx.scale(1, -1);
+        for (const shape of shapes) {
+          drawShape(shape, time);
+        }
+        ctx.restore();
+      }
+
+      ctx.restore();
+      requestAnimationFrame(render);
+    }
+
+    // Queue the render() function to execute just before the next screen repaint,
+    // enabling smooth, hardware-optimized animation that synchronizes with the browser's refresh rate.
+    // This call continuously loops the animation by re-invoking render() at the end of each frame cycle.
+    requestAnimationFrame(render);
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<hr>
+<p><strong>GEOMETRIC_KALEIDOSCOPE_MORPH Interface (screenshot during runtime)</strong></p>
+<hr />
+<p>The following is a screenshot image taken of a randomly generated kaleidoscope-like animation.</p>
+<p>image_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph_runtime_screenshot.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_46/main/geometric_kaleidoscope_morph_runtime_screenshot.png</a></p>
+<hr />
+
+<figure class="wp-block-image size-full"><img data-attachment-id="47886" data-permalink="https://karbytesforlifeblog.wordpress.com/geometric_kaleidoscope_morph/geometric_kaleidoscope_morph_runtime_screenshot/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png" data-orig-size="1300,651" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="geometric_kaleidoscope_morph_runtime_screenshot" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=300" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=1000" width="1300" height="651" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png" alt="" class="wp-image-47886" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png 1300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=150&amp;h=75 150w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=300&amp;h=150 300w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=768&amp;h=385 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/07/geometric_kaleidoscope_morph_runtime_screenshot.png?w=1024&amp;h=513 1024w" sizes="(max-width: 1300px) 100vw, 1300px" /></figure>
+
+<hr />
+<p>This web page was last updated on 21_JULY_2025. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />

@@ -1,0 +1,96 @@
+<hr>
+<p><strong>SPEECH_TO_TEXT_TRANSLATOR</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener">Python</a> program featured in this tutorial attempts to transcribe <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Speech" target="_blank" rel="noopener">spoken</a> <a style="background:#000000;color:#00ff00" href="https://karlinaobject.wordpress.com/word_counter/" target="_blank" rel="noopener">words</a> in an <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP3" target="_blank" rel="noopener">MP3</a> audio file to text (in a resulting output <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain-text</a> file) using Python modules which are downloaded and installed on the local machine which executes that Python program.</span></p>
+<p><span style="background:#00ffff">The example MP3 file which was used to generate the resulting output file which is featured on this web page was derived from the MP4 video file which is featured on this web page (and which features <a style="background:#000000;color:#ff9000" href="https://karbytesforlifeblog.wordpress.com/about_karbytes/" target="_blank" rel="noopener">karbytes</a> speaking the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Word" target="_blank" rel="noopener">words</a> which were verbatim transcribed by the Python program into the text in the resulting output file featured on this web page). That MP3 file was obtained by converting that <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP4_file_format" target="_blank" rel="noopener">MP4</a> file to an MP3 file using the Python program featured on the tutorial web page at the following Uniform Resource Locator:</span></p>
+<p><a style="background:#000000;color:#00ff00" href="https://karbytesforlifeblog.wordpress.com/mp4_to_mp3_converter/" target="_blank" rel="noopener">https://karbytesforlifeblog.wordpress.com/mp4_to_mp3_converter/</a></p>
+<p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
+<hr>
+<p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
+<hr>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/speech_to_text.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/speech_to_text.py</a></p>
+<p>input_audio_source_video_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/input_audio_source_karbytes_01november2024.mp4" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/input_audio_source_karbytes_01november2024.mp4</a></p>
+<p>output_plain_text_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/output_text.txt" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/output_text.txt</a></p>
+<hr>
+<p><strong>PROGRAM_INTERPRETATION_AND_EXECUTION</strong></p>
+<hr>
+<p>STEP_0: Copy and paste the Python <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/speech_to_text.py" target="_blank" rel="noopener">source code</a> into a new text editor document and save that document as the following file name:</p>
+<pre>speech_to_text.py</pre>
+<p>STEP_1: Install <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Pip_(package_manager)" target="_blank" rel="noopener">pip</a> (which, for karbytes, required using a <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Virtual_environment" target="_blank" rel="noopener">virtual environment</a> in which to install and run pip-installed Python modules) using the following <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener">Unix</a> commands.</p>
+<p><em>(The purpose of the virtual environment is to prevent conflicts which may arise from different processes using the same computing resources. In this case, the virtual environment enables the user to manage pip-installed packages independently of the system Python environment).</em></p>
+<p><em>(Note also that installing the virtual environment automatically installs pip with it).</em></p>
+<p>1.0: Create the virtual environment:</p>
+<pre>python3 -m venv myenv</pre>
+<p>1.1: Activate the virtual environment:</p>
+<pre>source myenv/bin/activate</pre>
+<p>1.2: Install <a style="background:#ff9000;color:#000000" href="https://pypi.org/project/SpeechRecognition/" target="_blank" rel="noopener">SpeechRecognition</a> within the Virtual Environment:</p>
+<pre>python3 -m pip show SpeechRecognition</pre>
+<p>1.3: Install <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/FFmpeg" target="_blank" rel="noopener">FFmpeg</a> using the following commands (in top-down order):</p>
+<pre>sudo apt update</pre>
+<pre>sudo apt install ffmpeg</pre>
+<p>1.4: Use the Virtual Environment:</p>
+<p>While the virtual environment is active, any Python commands will use the packages installed in myenv. To deactivate the virtual environment, use the following command:</p>
+<pre>deactivate</pre>
+<p>STEP_2: While the virtual environment is active, set the current directory to wherever the Python program file is located on the local machine (e.g. Desktop).</p>
+<pre>cd Desktop</pre>
+<p>STEP_3: Run the program by entering the following command:</p>
+<pre>python3 speech_to_text.py</pre>
+<p>STEP_4: If the program interpretation command does not work, then use the following commands (in top-down order) to install the Python interpreter:</p>
+<pre>sudo apt update</pre>
+<pre>sudo apt install python3</pre>
+<p>STEP_5: Observe program results in the file directory where the input audio file is located. The program should have created a plain-text <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/output_text.txt" target="_blank" rel="noopener">output file</a> in that directory which is an approximate transcription of the audio file if the audio file was not too long in sound-track duration and contained machine-comprehensible words.</p>
+<hr>
+<p><strong>PROGRAM_SOURCE_CODE</strong></p>
+<hr>
+<p>Note that the text inside of each of the the preformatted text boxes below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Web_browser" target="_blank" rel="noopener">web browser</a>) to be identical to the content of that preformatted text box text&#8217;s respective <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain-text</a> file or <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Source_code" target="_blank" rel="noopener">source code</a> output file (whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed as the <strong style="background:#000000;color:#00ff00">green</strong> <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> immediately above that preformatted text box (if that hyperlink points to a <strong>source code file</strong>) or whose Uniform Resource Locator is displayed as the <strong style="background:#000000;color:#ff9000">orange</strong> hyperlink immediately above that preformatted text box (if that hyperlink points to a <strong>plain-text file</strong>)).</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/speech_to_text.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_24/main/speech_to_text.py</a></p>
+<hr>
+<pre>
+#########################################################################################
+# file: speech_to_text.py
+# type: Python
+# date: 01_NOVEMBER_2024
+# author: karbytes
+# license: PUBLIC_DOMAIN 
+#########################################################################################
+import speech_recognition as sr
+from pydub import AudioSegment
+
+def mp3_to_text():
+    # Hardcoded file paths
+    mp3_file_path = "input_audio.mp3"
+    output_file_path = "output_text.txt"
+    
+    # Convert MP3 to WAV
+    audio = AudioSegment.from_mp3(mp3_file_path)
+    wav_file_path = "temp_audio.wav" # user can manually delete or keep the intermediary WAV file
+    audio.export(wav_file_path, format="wav")
+
+    # Initialize recognizer
+    recognizer = sr.Recognizer()
+
+    # Load the WAV file and transcribe it
+    with sr.AudioFile(wav_file_path) as source:
+        audio_data = recognizer.record(source)
+        try:
+            text = recognizer.recognize_google(audio_data)
+            print("Transcription successful!")
+
+            # Write transcription to a text file
+            with open(output_file_path, "w") as text_file:
+                text_file.write(text)
+
+            print(f"Transcription saved to {output_file_path}")
+
+        except sr.UnknownValueError:
+            print("Could not understand audio")
+        except sr.RequestError as e:
+            print(f"Could not request results from Speech Recognition service; {e}")
+
+if __name__ == "__main__":
+    mp3_to_text()
+</pre>
+<hr>
+<p>This web page was last updated on 07_NOVEMBER_2024. The content displayed on this web page is licensed as <a style="background:#000000;color:#ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr>
