@@ -1,0 +1,183 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+
+This Python program computes the greatest common divisor of two natural numbers and prints the steps involved.
+
+--------------------------------
+
+--------------------------------
+
+Entered values: A = 16, B = 12
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 16, B = 12, gcd(A,B) = A % B = 4.
+
+step_1: A = 12, B = 4, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 4
+
+
+--------------------------------
+
+Entered values: A = 21, B = 9
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 21, B = 9, gcd(A,B) = A % B = 3.
+
+step_1: A = 9, B = 3, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 3
+
+
+--------------------------------
+
+Entered values: A = -25, B = 15
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = -25, B = 15, gcd(A,B) = A % B = 5.
+
+step_1: A = 15, B = 5, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 5
+
+
+--------------------------------
+
+Entered values: A = 17384939202374, B = 32632534825
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 17384939202374, B = 32632534825, gcd(A,B) = A % B = 24430675474.
+
+step_1: A = 32632534825, B = 24430675474, gcd(A,B) = A % B = 8201859351.
+
+step_2: A = 24430675474, B = 8201859351, gcd(A,B) = A % B = 8026956772.
+
+step_3: A = 8201859351, B = 8026956772, gcd(A,B) = A % B = 174902579.
+
+step_4: A = 8026956772, B = 174902579, gcd(A,B) = A % B = 156340717.
+
+step_5: A = 174902579, B = 156340717, gcd(A,B) = A % B = 18561862.
+
+step_6: A = 156340717, B = 18561862, gcd(A,B) = A % B = 7845821.
+
+step_7: A = 18561862, B = 7845821, gcd(A,B) = A % B = 2870220.
+
+step_8: A = 7845821, B = 2870220, gcd(A,B) = A % B = 2105381.
+
+step_9: A = 2870220, B = 2105381, gcd(A,B) = A % B = 764839.
+
+step_10: A = 2105381, B = 764839, gcd(A,B) = A % B = 575703.
+
+step_11: A = 764839, B = 575703, gcd(A,B) = A % B = 189136.
+
+step_12: A = 575703, B = 189136, gcd(A,B) = A % B = 8295.
+
+step_13: A = 189136, B = 8295, gcd(A,B) = A % B = 6646.
+
+step_14: A = 8295, B = 6646, gcd(A,B) = A % B = 1649.
+
+step_15: A = 6646, B = 1649, gcd(A,B) = A % B = 50.
+
+step_16: A = 1649, B = 50, gcd(A,B) = A % B = 49.
+
+step_17: A = 50, B = 49, gcd(A,B) = A % B = 1.
+
+step_18: A = 49, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+
+--------------------------------
+
+Entered values: A = 66, B = 666
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 66, B = 666, gcd(A,B) = A % B = 66.
+
+step_1: A = 666, B = 66, gcd(A,B) = A % B = 6.
+
+step_2: A = 66, B = 6, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 6
+
+
+--------------------------------
+
+Entered values: A = -11, B = -11
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = -11, B = -11, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is -11
+
+
+--------------------------------
+
+Entered values: A = 0, B = 0
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+The greatest common divisor of A and B is 0
+
+
+--------------------------------
+
+Entered values: A = 81, B = 17
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 81, B = 17, gcd(A,B) = A % B = 13.
+
+step_1: A = 17, B = 13, gcd(A,B) = A % B = 4.
+
+step_2: A = 13, B = 4, gcd(A,B) = A % B = 1.
+
+step_3: A = 4, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+
+--------------------------------
+
+Entered values: A = 81, B = 45
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 81, B = 45, gcd(A,B) = A % B = 36.
+
+step_1: A = 45, B = 36, gcd(A,B) = A % B = 9.
+
+step_2: A = 36, B = 9, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 9
+
+
+--------------------------------
+End Of Program
+--------------------------------

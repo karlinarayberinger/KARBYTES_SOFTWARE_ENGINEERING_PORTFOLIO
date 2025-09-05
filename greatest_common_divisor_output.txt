@@ -1,0 +1,241 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+This C++ program computes the greatest common divisor of two natural numbers and prints the steps involved.
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 10.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 9.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 10, B = 9, gcd(A,B) = A % B = 1.
+
+step_1: A = 9, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 10.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 20.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 10, B = 20, gcd(A,B) = A % B = 10.
+
+step_1: A = 20, B = 10, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 10
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 144.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 99.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 144, B = 99, gcd(A,B) = A % B = 45.
+
+step_1: A = 99, B = 45, gcd(A,B) = A % B = 9.
+
+step_2: A = 45, B = 9, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 9
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is -11.
+
+A has been reset to 1 due to the fact that the input value for A was either less than one or else greater than 10000.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is -11.
+
+B has been reset to 1 due to the fact that the input value for B was either less than one or else greater than 10000.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 1, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 10001.
+
+A has been reset to 1 due to the fact that the input value for A was either less than one or else greater than 10000.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 10001.
+
+B has been reset to 1 due to the fact that the input value for B was either less than one or else greater than 10000.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 1, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 10000.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 10000.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 10000, B = 10000, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 10000
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 0.
+
+A has been reset to 1 due to the fact that the input value for A was either less than one or else greater than 10000.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 0.
+
+B has been reset to 1 due to the fact that the input value for B was either less than one or else greater than 10000.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 1, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 1.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 1.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 1, B = 1, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 1
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 666.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 303.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 666, B = 303, gcd(A,B) = A % B = 60.
+
+step_1: A = 303, B = 60, gcd(A,B) = A % B = 3.
+
+step_2: A = 60, B = 3, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 3
+
+--------------------------------
+
+Enter the first of two natural numbers (which will be stored in an int type variable named A) which is no larger than 10000: 
+
+The value which was entered for A is 1024.
+
+--------------------------------
+
+Enter the second of two natural numbers (which will be stored in an int type variable named B) which is no larger than 10000: 
+
+The value which was entered for B is 888.
+
+--------------------------------
+
+Computing the greatest common divisor of A and B using the Euclidean algorithm...
+
+step_0: A = 1024, B = 888, gcd(A,B) = A % B = 136.
+
+step_1: A = 888, B = 136, gcd(A,B) = A % B = 72.
+
+step_2: A = 136, B = 72, gcd(A,B) = A % B = 64.
+
+step_3: A = 72, B = 64, gcd(A,B) = A % B = 8.
+
+step_4: A = 64, B = 8, gcd(A,B) = A % B = 0.
+
+The greatest common divisor of A and B is 8
+
+--------------------------------
+End Of Program
+--------------------------------
