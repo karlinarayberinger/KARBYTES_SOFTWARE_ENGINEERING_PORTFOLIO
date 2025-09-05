@@ -1,0 +1,51 @@
+/**
+ * file: falling_apples_game_two_style.css
+ * type: Cascading-Style-Sheet
+ * date: 17_AUGUST_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+/* Keep the whole app inside the device viewport */
+html, body { height: 100%; overscroll-behavior: none; }
+body {
+  margin: 0;
+  padding: env(safe-area-inset-top) 8px env(safe-area-inset-bottom);
+  background: #000;
+  color: #0f0;
+  font-family: monospace, sans-serif;
+  text-align: center;
+  overflow: hidden; /* prevent accidental vertical scroll */
+}
+
+/* Title & scoreboard scale with viewport and don’t add big margins */
+h1#title, h1 {
+  margin: 4px 0 2px;
+  font-size: clamp(16px, 4vmin, 28px);
+}
+
+#scoreboard {
+  margin: 0 0 6px;
+  font-size: clamp(14px, 3.2vmin, 22px);
+}
+
+/* Keep container tidy */
+#game-container { position: relative; display: inline-grid; gap: 6px; }
+
+/* Canvas border stays; size set via JS */
+#game-canvas { border: 2px solid #00ff00; background: #e0f7fa; }
+
+/* Controls compact & responsive */
+#controls { margin: 0; }
+button {
+  font-size: clamp(16px, 4.2vmin, 24px);
+  padding: clamp(6px, 1.2vmin, 12px) clamp(10px, 2vmin, 16px);
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+#restart-btn {
+  margin-top: 6px;
+  font-size: clamp(14px, 3.6vmin, 20px);
+  padding: clamp(6px, 1.2vmin, 10px) clamp(10px, 2vmin, 14px);
+}

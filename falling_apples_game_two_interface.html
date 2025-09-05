@@ -1,0 +1,34 @@
+<!--
+  /**
+   * file: falling_apples_game_two_interface.html
+   * type: Hyper-Text-Markup-Language
+   * date: 17_AUGUST_2025
+   * author: karbytes
+   * license: PUBLIC_DOMAIN
+   */
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Falling Apples Game Two</title>
+  <link rel="stylesheet" href="falling_apples_game_two_style.css">
+</head>
+<body>
+  <h1 id="title">🍎 Falling Apples Game Two</h1>
+  <div id="scoreboard">
+    Score: <span id="score">0</span> / 100 |
+    Time: <span id="timer">0</span> sec
+  </div>
+  <div id="game-container">
+    <canvas id="game-canvas" width="400" height="600" tabindex="0"></canvas>
+    <div id="controls">
+      <button id="left-btn">⬅️</button>
+      <button id="right-btn">➡️</button>
+      <button id="restart-btn" style="display:none;">🔄 Restart</button>
+    </div>
+  </div>
+  <script src="falling_apples_game_two_logic.js"></script>
+</body>
+</html>
