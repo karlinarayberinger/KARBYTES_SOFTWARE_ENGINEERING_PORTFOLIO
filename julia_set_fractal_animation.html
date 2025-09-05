@@ -1,0 +1,71 @@
+<!--
+/**
+ * file: julia_set_fractal_animation.html
+ * type: Hyper-Text-Markup-Language
+ * date: 12_JULY_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JULIA_SET_FRACTAL_ANIMATION</title>
+
+  <!-- 
+  /** 
+   * The linked Cascading-Style-Sheet (CSS) file controls 
+   * the appearance of elements of this web page.
+   */
+  -->
+  <link rel="stylesheet" href="julia_set_fractal_animation.css">
+
+</head>
+<body>
+
+  <!--
+  /**
+   * The controls DIV element displays a button which the user can click on to reset the animation.
+   */
+  -->
+  <div id="controls">
+    <button onclick="regenerateFractal()">Regenerate Julia Set</button>
+  </div>
+
+  <!--
+  /**
+   * The info DIV element displays the following dynamically-updated text:
+   *
+   * c = [real part of c] + [imaginary part of c]i
+   *
+   * zoom = [current zoom level]
+   *
+   * center = ([x coordinate], [y coordinate])
+   */
+  -->
+  <div id="info"></div>
+
+  <!--
+  /**
+   * The canvas element displays a randomly-generated Julia set fractal which is zoomed into 
+   * for indefinitely many animation frames.
+   * 
+   * (Note that, after "very many" animation frames, the zoom value may exceed the 
+   * JavaScript floating-point number representation capacity (even though the animation
+   * can continue zooming in for an indefinitely long time period while the application window is 
+   * open).
+  -->
+  <canvas id="fractalCanvas"></canvas>
+
+  <!-- 
+  /**
+   * In order for the JavaScript file to be properly loaded by the web page application, 
+   * the script tag linking that JavaScript file to this HTML file must be placed at the bottom 
+   * of the body element of this web page.
+   */
+  -->
+  <script src="julia_set_fractal_animation.js"></script>
+
+</body>
+</html>

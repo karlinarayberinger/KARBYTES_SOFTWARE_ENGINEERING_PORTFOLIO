@@ -1,0 +1,108 @@
+/**
+ * file: julia_set_fractal_animation.css
+ * type: Cascading-Style-Sheet
+ * date: 12_JULY_2025
+ * author: karbytes
+ * license: PUBLIC_DOMAIN
+ */
+
+/***************************************************************
+ * Note that this Cascading-Style-Sheet file's contents can be 
+ * copy-pasted into a <style> element placed inside of the
+ * <head> element of julia_set_fractal.html
+ * (while replacing the link element which links to this file).
+ **************************************************************/
+
+/**
+ * Set the default margin and padding of the HTML and body elements to zero.
+ * 
+ * Set the background color to black and the text color to white to establish a high-contrast theme.
+ * 
+ * Use a monospace font for all body text to match the aesthetic of code or terminal-style output.
+ * 
+ * Hide any scrollbars and prevent content overflow by setting overflow to hidden,
+ * ensuring that the canvas fills the entire viewport without unintended scroll behavior.
+ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  color: white;
+  font-family: monospace;
+}
+
+/**
+ * Set the canvas element to display as a block-level element
+ * so that it does not introduce any unwanted inline spacing
+ * and can expand to fill its container without layout issues.
+ */
+canvas {
+  display: block;
+}
+
+/**
+ * Position the #controls container absolutely relative to the nearest positioned ancestor
+ * (in this case, the browser window) so that it remains fixed in place regardless of canvas rendering.
+ * 
+ * Offset the container 10 pixels from the top and 10 pixels from the left of the viewport.
+ * 
+ * Assign a z-index of 10 to ensure that the control panel appears above other page elements,
+ * such as the canvas, which may otherwise overlap it.
+ */   
+#controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+/**
+ * Style the #info element, which displays live fractal parameters (e.g., c, zoom, center).
+ * 
+ * Position it absolutely so it stays fixed 50 pixels from the top and 10 pixels from the left of the viewport.
+ * 
+ * Assign a z-index of 10 to ensure it appears above the canvas.
+ * 
+ * Set a semi-transparent black background (rgba(0, 0, 0, 0.6)) for readability without fully obscuring the fractal.
+ * 
+ * Add internal padding (8 pixels vertically, 12 pixels horizontally) to create spacing around the text.
+ * 
+ * Apply a 5-pixel border-radius to slightly round the corners for a cleaner visual appearance.
+ */
+#info {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/**
+ * Style all <button> elements used in the interface.
+ * 
+ * Set the background color to a bright blue (#03a9f4) for high visibility.
+ * 
+ * Remove the default border for a cleaner and more relatively modern look.
+ * 
+ * Add padding (10-pixel vertical, 20-pixel horizontal) to enlarge the clickable area and improve usability.
+ * 
+ * Set the font size to 1em to maintain consistency with surrounding text.
+ * 
+ * Change the cursor to a pointer on hover to indicate interactivity.
+ * 
+ * Apply a 5-pixel border-radius to round the corners slightly for a softer, more polished appearance.
+ * 
+ * Set the text color to white for strong contrast against the blue background.
+ */
+button {
+  background-color: #03a9f4;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
