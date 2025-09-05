@@ -1,0 +1,230 @@
+<!--
+/**
+ * file: onion_web_page_availability_logger.html
+ * type: Hyper-Text-Markup-Language
+ * author: karbytes
+ * date: 05_MAY_2025
+ * license: PUBLIC_DOMAIN
+ */
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>.onion Fetch Monitor (with Pruning)</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #eee;
+    }
+    .stats {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    #keep_session_active_button {
+      background: #00ff00;
+      color: #000000;
+      border-color: #00ff00;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 5px;
+      padding: 10px;
+      appearance: none;  
+      font-family: monospace;
+      font-size: 16px;
+    }
+    #keep_session_active_button:hover {
+      background: #00ffff;
+      border-color: #00ffff;
+    }
+  </style>
+</head>
+<body>
+  <!-- static text -->
+  <h1>.onion Page Fetch Monitor</h1>
+  <p><em>Determine whether or not <a style="background: #000000;color: #00ffff" href="http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/" target="_blank" rel="noopener">a particular .onion web page</a> is discoverable on the World Wide Web at a particular time.</em></p>
+  <p><em>Log the most recent 100 instances of polling that .onion web page once per every 60 seconds (until this browser window is closed).</em></p>
+  <p><em>(Note that <a style="background: #000000;color: #00ff00" href="http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/KARBYTES_BLOG_APPS/ONION_WEB_PAGE_AVAILABILITY_LOGGER/onion_web_page_availability_logger.html" target="_blank" rel="noopener">this web page application</a> must be hosted from a dark web server in order to work).</em></p>
+  <p><em>(Note also that this web page application must be run via a dark web browser such as Tor).</em></p>
+  <p style="background:#ffff00"><em>(Documentation: <a style="background: #000000;color: #00ff00" href="https://karbytesforlifeblog.wordpress.com/onion_web_page_availability_logger/" target="_blank" rel="noopener">https://karbytesforlifeblog.wordpress.com/onion_web_page_availability_logger/</a>).</em></p>
+  <p style="background:#00ffff">Polling: <code>http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/</code> every 60 seconds.</p>
+
+  <!-- workaround to prevent the web page script from pausing due to the web page being treated as a background "process" -->
+  <p><em>(To prevent the script in this web page from haulting due to it not being the active application window on a mobile device, click the button below to start playing sound tracks with staggered play durations).</em></p>
+  <p><input type="button" id="keep_session_active_button" value="keep_session_active()" onclick="keep_session_active()"></p>    
+
+  <!-- dynamic text updated once per minute of browser tab session duration -->
+  <div class="stats">
+    <p>Total Attempts: <span id="totalAttempts">0</span></p>
+    <p>Successes: <span id="successCount">0</span></p>
+    <p>Failures: <span id="failureCount">0</span></p>
+    <p>Success Rate: <span id="successRate">0%</span></p>
+  </div>
+
+  <!-- dynamic table (with a maximum of 100 rows) updated once per minute of browser tab session duration -->
+  <table id="logTable">
+    <thead>
+      <tr>
+        <th>ISO Timestamp</th>
+        <th>Unix Epoch (ms)</th>
+        <th>Status</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- embedded javascript functions update this web page with minute-by-minute .onion web page pulling results -->
+  <script>
+
+    /**
+     * The JavaScript code which follows is intended to keep this Tor browser tab active
+     * rather than going dormant while that browser tab is treated by the operating system (OS)
+     * as a background process on mobile devices. 
+     * 
+     * On mobile devices such as an Android smartphone, only one browser tab and only one
+     * non-OS software application can be actively featured in the user's "viewport" per
+     * instant. By contrast, on more fully-featured machines such as a Ubuntu laptop computer,
+     * multiple browser tabs and multiple non-OS software applications can be running simultaneously
+     * inside of one "viewport" (i.e. user experience instant).
+     */
+
+    // List of audio file URLs
+    const file_path_root = 'http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/KARBYTES_BLOG_APPS/SOUND_TRACK_LOOP_COUNTER_TWO/';
+    const soundTracks = [
+      file_path_root + 'karbytes_drums_20_october_2023.mp3', // 200 seconds
+      file_path_root + 'frogs_croaking_in_castro_valley_california_21_april_2022.mp3', // 16 seconds
+      file_path_root + 'karbytes_guitar_castro_valley_california_12_december_2022.mp3', // 109 seconds
+    ];
+
+    // Create and configure audio elements
+    const audioElements = soundTracks.map(src => {
+      const audio = new Audio(src);
+      audio.loop = true;
+      // audio.volume = 0.0; // Silent playback (full volume is 1.0)
+      audio.volume = 1.0; // Volume is turned to 100% for debugging purposes. Never mind! Volume is turned up for functional purposes. The browser seems to treat zero volume sound file plays as non-existent processes.
+      return audio;
+    });
+
+    // Function to start playback on user interaction
+    function startPlayingSilentSoundTracks() {
+      audioElements.forEach(audio => {
+        audio.play().catch(err => {
+          console.warn("Failed to play track:", err);
+        });
+      });
+    }
+
+    /**
+     * "Wrapper function" has a name suggesting its purpose.
+     * 
+     * (For security reasons, a user-initiated action is required 
+     * to start the indefinitely long session created by multiple 
+     * audio files playing simultaneously on indefinitely many loops).
+     * 
+     * (Each sound file has a unique duration (with respect to each of the three sound files
+     * referenced by this HTML file) in order to ensure that the sound files start and stop 
+     * playing at different points in the time this HTML file is opened as a single web browser tab
+     * so that there is no gap of "silence" (if the volumes of those sound tracks are set to audible)
+     * while that browser tab is open (i.e. exists)).
+     * 
+     * IMPORTANT UPDATE: The volume for the sound files has been turned up to 100% due to the fact
+     * that the browser seems to treat the sound files like they are not being played if their volumes
+     * are muted. (Hence, the function being called by this wrapper function is not actually playing silent
+     * sound files in this configuration (but this application's source file can be downloaded and modified
+     * to use genuinely silent audio files (i.e. sound files which consist of only silence even when their volumes
+     * are turned up to maximum volume))).a
+     */
+    function keep_session_active() {
+      startPlayingSilentSoundTracks();
+    }
+
+    /**************************************************************************************************************************
+     * The code block above this comment is supposed to be above the code blocks below this comment.
+     * That is because the code block above this comment defines variables used by the code blocks below this comment.
+     * 
+     * This comment applies to a line of code which was commented out in visitPage().
+     **************************************************************************************************************************/
+
+    /**
+     * The Uniform Resource Locator (URL) of the .onion web page being polled once per minute.
+     * This is not the URL of the .onion web page doing that polling.
+     */
+    const targetUrl = "http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/";
+
+    // duration of time between each successive pull.
+    const intervalMilliseconds = 60 * 1000;
+
+    // mutable program variables
+    let totalAttempts = 0;
+    let successCount = 0;
+    let failureCount = 0;
+    const maxRows = 100;
+
+    function updateStats() {
+      document.getElementById("totalAttempts").textContent = totalAttempts;
+      document.getElementById("successCount").textContent = successCount;
+      document.getElementById("failureCount").textContent = failureCount;
+      const successRate = totalAttempts > 0
+        ? ((successCount / totalAttempts) * 100).toFixed(2) + "%"
+        : "0%";
+      document.getElementById("successRate").textContent = successRate;
+    }
+
+    function logResult(isoTime, epochTime, status, notes) {
+      const tableBody = document.getElementById("logTable").querySelector("tbody");
+
+      // Prune oldest row if over max
+      if (tableBody.rows.length >= maxRows) {
+        tableBody.deleteRow(0);
+      }
+
+      const row = document.createElement("tr");
+      [isoTime, epochTime, status, notes].forEach(text => {
+        const cell = document.createElement("td");
+        cell.textContent = text;
+        row.appendChild(cell);
+      });
+      tableBody.appendChild(row);
+    }
+
+    // This function is called when the web page is initially loaded by the web browser.
+    async function visitPage() {
+      // startPlayingSilentSoundTracks(); // Prevent the functions in this web page from haulting while the respective browser tab exists.
+      const now = new Date();
+      const isoTime = now.toISOString(); // ISO 8601 time stamp formatting (International Organization for Standardization)
+      const epochTime = now.getTime(); // milliseconds since Unix Epoch (midnight on 01_JANUARY_1990 Coordinated Universal Time (UTC))
+      totalAttempts++;
+      try {
+        const response = await fetch(targetUrl + "?t=" + epochTime, {
+          method: "GET",
+          mode: "no-cors",
+          cache: "no-store"
+        });
+        successCount++;
+        logResult(isoTime, epochTime, "Attempted", `Response type: ${response.type}`);
+      } catch (error) {
+        failureCount++;
+        logResult(isoTime, epochTime, "Failed", error.toString());
+      }
+      updateStats();
+    }
+
+    visitPage(); // Initial attempt
+    setInterval(visitPage, intervalMilliseconds);
+  </script>
+</body>
+</html>

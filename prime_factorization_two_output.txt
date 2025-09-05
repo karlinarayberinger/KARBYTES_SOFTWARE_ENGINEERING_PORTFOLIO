@@ -1,0 +1,36 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+
+Prime factorization of 10 is: 2 * 5.
+
+
+Prime factorization of 12 is: 2 * 2 * 3.
+
+
+Prime factorization of 13 is: 13.
+
+
+0 is not factorizable into multiple prime number multiplicative terms.
+
+Prime factorization of 100 is: 2 * 2 * 5 * 5.
+
+
+Prime factorization of 256 is: 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2.
+
+
+Prime factorization of 201 is: 3 * 67.
+
+
+1 is not factorizable into multiple prime number multiplicative terms.
+
+Prime factorization of 2 is: 2.
+
+
+Prime factorization of 999 is: 3 * 3 * 3 * 37.
+
+
+--------------------------------
+End Of Program
+--------------------------------

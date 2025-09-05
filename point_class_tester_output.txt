@@ -1,0 +1,465 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 0: POINT class default constructor, POINT class print method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point;
+point.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 1: POINT class default constructor, POINT class print method (with default parameter), and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point;
+point.print(); // Standard command line output (std::cout) is the default parameter for the POINT print method.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 2: POINT class default constructor, POINT class overloaded ostream operator method (which is functionally the same as the POINT class print method), and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point;
+output << point; // functionally equivalent to: point.print(output);
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 3: POINT class default constructor (using that function explicity rather than implicitly), POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point = POINT(); // functionally equivalent to: POINT point;
+output << point;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 4: POINT class normal constructor (using only valid function inputs), POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point = POINT(-503,404);
+output << point;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -503. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 404. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 5: POINT class normal constructor (using only valid function inputs), POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point_0 = POINT(-999,-999);
+POINT point_1 = POINT(999, 999);
+POINT point_2 = POINT(-999, 999);
+POINT point_3 = POINT(999, -999);
+output << point_0;
+output << point_1;
+output << point_2;
+output << point_3;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b238. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b238. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b23c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b240. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b240. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b244. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b248. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b248. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b24c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 6: POINT class normal constructor (using both valid and invalid function inputs), POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point_0 = POINT(-1000, -999); // point_0 = POINT(0,-999).
+POINT point_1 = POINT(1000, -999); // point_1 = POINT(0,-999).
+POINT point_2 = POINT(-999, -1000); // point_2 = POINT(-999,0).
+POINT point_3 = POINT(-999, 1000); // point_3 = POINT(-999,0).
+POINT point_4 = POINT(-1000, -1000); // point_4 = POINT(0,0).
+POINT point_5 = POINT(1000, 1000); // point_5 = POINT(0,0).
+POINT point_6 = POINT(999, 999); // point_6 = POINT(999,999).
+output << point_0;
+output << point_1;
+output << point_2;
+output << point_3;
+output << point_4;
+output << point_5;
+output << point_6;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b220. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b220. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b224. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b228. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b228. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b22c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b230. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b230. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b234. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b238. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b238. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b23c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b240. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b240. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b244. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b248. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b248. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b24c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 7: POINT class normal constructor, POINT class copy constructor, POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point_0 = POINT(333, -666);
+POINT point_1 = POINT(point_0);
+output << point_0;
+output << point_1;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b248. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b248. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b24c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 333. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -666. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 333. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -666. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 8: POINT class normal constructor, POINT class distance getter method, POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point_0 = POINT(1, 1);
+POINT point_1 = POINT(-1, -1);
+output << point_0;
+output << point_1;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b248. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b248. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b24c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = -1. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -1. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+point_0.get_distance_from(point_1) = 2.828427124746190290949243717477656900882720947265625.
+point_1.get_distance_from(point_0) = 2.828427124746190290949243717477656900882720947265625.
+point_0.get_distance_from(point_0) = 0.
+point_1.get_distance_from(point_1) = 0.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 9: POINT class normal constructor, POINT class distance getter method, POINT class slope getter method, POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point_0 = POINT(0, 4);
+POINT point_1 = POINT(3, 0);
+POINT point_2 = POINT(0, 0);
+output << point_0;
+output << point_1;
+output << point_2;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b240. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b240. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b244. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 4. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b248. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b248. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b24c. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 3. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 0. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 0. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+point_0.get_distance_from(point_1) = 5.
+point_1.get_distance_from(point_0) = 5.
+point_1.get_distance_from(point_2) = 3.
+point_2.get_distance_from(point_1) = 3.
+point_2.get_distance_from(point_0) = 4.
+point_0.get_distance_from(point_2) = 4.
+point_0.get_distance_from(point_0) = 0.
+point_1.get_distance_from(point_1) = 0.
+point_2.get_distance_from(point_2) = 0.
+point_0.get_slope_of_line_to(point_1) = -1.3333333333333332593184650249895639717578887939453125.
+point_1.get_slope_of_line_to(point_0) = -1.3333333333333332593184650249895639717578887939453125.
+point_1.get_slope_of_line_to(point_2) = 0.
+point_2.get_slope_of_line_to(point_1) = 0.
+point_2.get_slope_of_line_to(point_0) = inf.
+point_0.get_slope_of_line_to(point_2) = -inf.
+point_0.get_slope_of_line_to(point_0) = -nan.
+point_1.get_slope_of_line_to(point_1) = -nan.
+point_2.get_slope_of_line_to(point_2) = -nan.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 10: POINT class normal constructor, POINT class data attribute getter methods, POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point = POINT(33.3, 88.8); // point = POINT(33, 88).
+output << point;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 33. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 88. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+point.get_X() = 33.
+point.get_Y() = 88.
+
+--------------------------------------------------------------------------------------------------
+Unit Test # 10: POINT class normal constructor, POINT class data attribute setter methods, POINT class overloaded ostream operator method, and POINT class destructor.
+--------------------------------------------------------------------------------------------------
+POINT point = POINT(666,777);
+output << point;
+point.set_X(999);
+output << point;
+point.set_Y(-999);
+output << point;
+point.set_X(-1000);
+output << point;
+point.set_X(200);
+output << point;
+point.set_Y(-1000);
+output << point;
+point.set_Y(444);
+output << point;
+point.set_X(1000);
+output << point;
+point.set_Y(1000);
+output << point;
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 666. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 777. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 777. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 999. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 200. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 200. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = -999. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 200. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 444. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 200. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 444. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+this = 0x7ffe4927b250. // The keyword named this is a pointer which stores the memory address of the first memory cell of a POINT sized chunk of contiguous memory cells which are allocated to the caller POINT object.
+&X = 0x7ffe4927b250. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named X.
+&Y = 0x7ffe4927b254. // The reference operation returns the memory address of the first memory cell of an int sized chunk of contiguous memory cells which are allocated to the caller POINT data attribute named Y.
+sizeof(int) = 4. // The sizeof() operation returns the number of bytes of memory which an int type variable occupies. (Each memory cell has a data capacity of 1 byte).
+sizeof(POINT) = 8. // The sizeof() operation returns the number of bytes of memory which a POINT type object occupies. (Each memory cell has a data capacity of 1 byte).
+X = 200. // X stores one int type value at a time which represents the horizontal position of a two-dimensional point plotted on a Cartesian grid.
+Y = 444. // Y stores one int type value at a time which represents the vertical position of a two-dimensional point plotted on a Cartesian grid.
+--------------------------------------------------------------------------------------------------
+
+--------------------------------
+End Of Program
+--------------------------------

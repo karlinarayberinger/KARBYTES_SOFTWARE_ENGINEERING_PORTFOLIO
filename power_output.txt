@@ -1,0 +1,113 @@
+--------------------------------
+START OF PROGRAM
+--------------------------------
+
+power(base, exponent) = base ^ exponent.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 0
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0
+
+result = power(base,exponent) = power(0, 0) = 0 ^ 0 = 1.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 3
+
+result = power(base,exponent) = power(2, 3) = 2 ^ 3 = 8.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: -2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 3
+
+result = power(base,exponent) = power(-2, 3) = -2 ^ 3 = -8.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: -2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: -3
+
+result = power(base,exponent) = power(-2, -3) = -2 ^ -3 = -0.125.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0.5
+
+result = power(base,exponent) = power(2, 0.5) = 2 ^ 0.5 = 1.41452190152525414390538571751676499843597412109375.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: -2
+
+result = power(base,exponent) = power(2, -2) = 2 ^ -2 = 0.25.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 2
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: -1
+
+result = power(base,exponent) = power(2, -1) = 2 ^ -1 = 0.5.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 0.5
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: -1
+
+result = power(base,exponent) = power(0.5, -1) = 0.5 ^ -1 = 2.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 0.5
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0.5
+
+result = power(base,exponent) = power(0.5, 0.5) = 0.5 ^ 0.5 = 0.7072609494155397413805985706858336925506591796875.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 100
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0.5
+
+result = power(base,exponent) = power(100, 0.5) = 100 ^ 0.5 = 10.0015620834400120742202489054761826992034912109375.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: -100
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0.5
+
+result = power(base,exponent) = power(-100, 0.5) = -100 ^ 0.5 = 3403358482654129315574312994291840974848.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 16
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: -2
+
+result = power(base,exponent) = power(16, -2) = 16 ^ -2 = 0.00390625.
+
+--------------------------------
+
+Enter a real number value for base which is no larger than 100 and no smaller than -100: 16
+
+Enter a real number value for exponent which is no larger than 100 and no smaller than -100: 0.5
+
+result = power(base,exponent) = power(16, 0.5) = 16 ^ 0.5 = 4.0008722454872884810583855141885578632354736328125.
+
+--------------------------------
+END OF PROGRAM
+--------------------------------

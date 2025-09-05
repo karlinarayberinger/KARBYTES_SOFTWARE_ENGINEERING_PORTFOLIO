@@ -1,0 +1,49 @@
+--------------------------------
+Start Of Program
+--------------------------------
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 30.
+
+Prime factorization of 30 is: 2 * 3 * 5.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 25.
+
+Prime factorization of 25 is: 5 * 5.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 0.
+
+0 is not factorizable into multiple prime number multiplicative terms.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is -1.
+
+Prime factorization of 10 is: 2 * 5.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 1.
+
+1 is not factorizable into multiple prime number multiplicative terms.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 2.
+
+Prime factorization of 2 is: 2.
+
+Enter a nonnegative integer value to store in the variable named N which is no larger than 10000 to factor into its constituent prime number multiplicative terms: 
+
+The value which was entered for N is 144.
+
+Prime factorization of 144 is: 2 * 2 * 2 * 2 * 3 * 3.
+
+--------------------------------
+End Of Program
+--------------------------------
