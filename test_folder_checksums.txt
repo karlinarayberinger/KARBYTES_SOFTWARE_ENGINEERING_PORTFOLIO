@@ -1,0 +1,41 @@
+--------------------------------
+
+This Python program prints the SHA-256 checksum of each file inside of a particular folder.
+
+--------------------------------
+
+Directory: test_folder
+
+file_0: green_hillside_castro_valley_02_may_2022.jpeg // SHA-256: 3b7ee332909f3943a3dc6184532969e613364296db8e7b54018a8d6bd251e34d
+
+file_1: rocky_ridge_trail_via_las_trampas_wilderness_in_california_15august2025_p11.jpg // SHA-256: e27171fa32acaf92e41d1436f24037872c77958679d5dbd9273ea54740ae52e8
+
+file_2: las_trampas_san_ramon_california_13may2025_p16.jpg // SHA-256: 7c90d17afede33edf7f96457b8fb43e183c1350590109c9983797abefc6fbac6
+
+Directory: test_folder/folder_B
+
+file_3: ramage_peak_trail_southwest_view_18_june_2022.jpg // SHA-256: 90f923de2335b8fba77e35f50eb0a0e9247ebb855b3f154676d5458b3aba9341
+
+file_4: las_trampas_wilderness_in_california_13august2025_p0.jpg // SHA-256: 0096206545a39e2d63b1fb85271639ecd5b7ab51ed3a5372ca866d23aea72c4a
+
+file_5: morning_sunlight_shines_through_oak_trees_castro_valley_california_10_june_2022.jpeg // SHA-256: 0c929a18deecddb728c315db4dca29b189e8f0a804f6367c97b79e685a4059c2
+
+Directory: test_folder/folder_A
+
+file_6: trees_on_a_hill_castro_valley_california_27_may_2022.png // SHA-256: 0ea7444917feb80ff1366cf0573d0290b81ea696a1fc7879ac1d17415b3a01fc
+
+file_7: skeletal_thistle_flowers_trees_in_background_castro_valley_california_06_october_2022.jpg // SHA-256: 99985a3c6ddd8bb87870c618c19787baa66d5345c846c7cfd6af9d1c2a13f640
+
+file_8: las_trampas_wilderness_in_california_13august2025_p3.mp4 // SHA-256: b2905a8202d6a90f8a53008c9011dafe60e54fc80189a27af062548dee954314
+
+Directory: test_folder/folder_A/folder_A0
+
+file_9: violet_flowers_amidst_golden_grass_castro_valley_california_30_may_2022.png // SHA-256: bba24cfacaecabbca8daf34399c1ccb4374f6b5bd059fe8db7ca5c8f30749c5a
+
+file_10: snake_in_the_grass_castro_valley_california_20_september_2022.jpg // SHA-256: 8b0b7830052b1c7b2e9e827e44c3a8bc0dfabdb6232fe64ce106fa540c97f71f
+
+--------------------------------
+
+Total number of files processed: 11
+
+--------------------------------
