@@ -1,0 +1,136 @@
+<hr>
+<p><strong>IMAGE_COLOR_INVERSION</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener">Python</a> program featured in this tutorial traverses every <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Pixel" target="_blank" rel="noopener">pixel</a> inside of a (rectangular) image file and inverts the red-green-blue (<a style="background:#000000;color:#00ff00" href="https://karlinaobject.wordpress.com/hexidecimal_color_codes/" target="_blank" rel="noopener">RGB</a>) values of that pixel.</span></p>
+<p>In the words of <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/GPT-5.2" target="_blank" rel="noopener">ChatGPT-5.2</a>,&#8221;This program deterministically transforms a raster image by loading it from a specified filesystem location, validating that the file exists, and normalizing it into RGB color space. It then traverses the image exhaustively at the pixel level, replacing each red, green, and blue component with its arithmetic complement relative to the fixed 8-bit maximum value (255), thereby producing a complete color inversion of the original data. The process is fully explicit, non-destructive with respect to the source file, and concludes by writing the transformed image to a new output file while emitting minimal diagnostic messages to document execution state and outcome.&#8221;</p>
+<p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
+<pre>
+# STEP_0: Obtain input image.
+image = Image.open(<a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/abstract_drawing_karbytes_26december2025_p0.jpg" target="_blank" rel="noopener">input_image_path</a>)
+image = image.convert("RGB")
+pixels = image.load()
+
+#STEP_1: Iterate across each pixel in image...
+for y in range(height):
+  for x in range(width):
+    r, g, b = pixels[x, y]
+    #...and invert its RGB values.
+    inverted_r = 255 - r
+    inverted_g = 255 - g
+    inverted_b = 255 - b
+    pixels[x, y] = (inverted_r, inverted_g, inverted_b)
+
+# STEP_2: Generate output image.
+image.save(<a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png" target="_blank" rel="noopener">output_image_path</a>)
+</pre>
+<hr>
+<p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
+<hr>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/invert_image_rgb.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/invert_image_rgb.py</a></p>
+<p>input_image_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/abstract_drawing_karbytes_26december2025_p0.jpg" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/abstract_drawing_karbytes_26december2025_p0.jpg</a></p>
+<p>input_image_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png</a></p>
+<hr>
+<p><strong>PROGRAM_INTERPRETATION_AND_EXECUTION</strong></p>
+<hr>
+<p>STEP_0: Copy and paste the Python <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/invert_image_rgb.py" target="_blank" rel="noopener">source code</a> into a new text editor document and save that document as the following file name:</p>
+<pre>invert_image_rgb.py</pre>
+<p>STEP_1: Open a <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener">Unix</a> command line terminal application and set the current directory to wherever the Python program file is located on the local machine (e.g. Desktop).</p>
+<pre>cd Desktop</pre>
+<p>STEP_2: Run the program by entering the following command:</p>
+<pre>python3 invert_image_rgb.py</pre>
+<p>STEP_3: If the program interpretation command does not work, then use the following commands (in top-down order) to install the Python interpreter:</p>
+<pre>sudo apt update</pre>
+<pre>sudo apt install python3</pre>
+<p>STEP_4: Observe program results on the command line terminal and in the <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png" target="_blank" rel="noopener">output file</a>.</p>
+<hr>
+<p><strong>PROGRAM_SOURCE_CODE</strong></p>
+<hr>
+<p>Note that the text inside of each of the the preformatted text boxes below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Web_browser" target="_blank" rel="noopener">web browser</a>) to be identical to the content of that preformatted text box text&#8217;s respective <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain-text</a> file or <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Source_code" target="_blank" rel="noopener">source code</a> output file (whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed as the <strong style="background:#000000;color:#00ff00">green</strong> <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> immediately above that preformatted text box (if that hyperlink points to a <strong>source code file</strong>) or whose Uniform Resource Locator is displayed as the <strong style="background:#000000;color:#ff9000">orange</strong> hyperlink immediately above that preformatted text box (if that hyperlink points to a <strong>plain-text file</strong>)).</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/invert_image_rgb.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/invert_image_rgb.py</a></p>
+<hr>
+<pre>
+#########################################################################################
+# file: invert_image_rgb.py
+# type: Python
+# date: 30_DECEMBER_2025
+# author: karbytes 
+# license: PUBLIC_DOMAIN
+#########################################################################################
+
+from PIL import Image
+import os
+
+# Define the only function in this program.
+def invert_image_rgb(input_image_path, output_image_path):
+
+    print("\n\n--------------------------------")
+    print("\n\nThis Python program inverts the RGB color values of each pixel in an image.")
+    print("\n\n--------------------------------")
+
+    # Verify that the input file exists.
+    if not os.path.isfile(input_image_path):
+        print(f"\n\nERROR: Input image not found: {input_image_path}")
+        print("\n\n--------------------------------\n\n")
+        return
+
+    # Open the image.
+    image = Image.open(input_image_path)
+
+    # Ensure the image is in RGB mode.
+    image = image.convert("RGB")
+
+    width, height = image.size
+    pixels = image.load()
+
+    print(f"\n\nProcessing image: {input_image_path}")
+    print(f"Image size: {width} x {height}")
+
+    # Iterate over every pixel.
+    for y in range(height):
+        for x in range(width):
+            r, g, b = pixels[x, y]
+
+            # Invert RGB values.
+            inverted_r = 255 - r
+            inverted_g = 255 - g
+            inverted_b = 255 - b
+
+            pixels[x, y] = (inverted_r, inverted_g, inverted_b)
+            #end of nested for loop definition
+    
+    # Save the modified image.
+    image.save(output_image_path)
+
+    print(f"\n\nInverted image written to: {output_image_path}")
+    print("\n\n--------------------------------\n\n")
+    # end of function definition
+
+# Set file paths.
+input_image_path = "abstract_drawing_karbytes_26december2025_p0.jpg"      # Replace with your actual image path.
+output_image_path = "input_image_inverted.png"
+
+# Execute the function defined in this program file.
+invert_image_rgb(input_image_path, output_image_path)
+</pre>
+<hr>
+<p><strong>SAMPLE_PROGRAM_OUTPUT</strong></p>
+<hr>
+<p>The first image embedded in this web page below this paragraph was generated by one use case of the Python program featured in this <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Computer_programming" target="_blank" rel="noopener">computer programming</a> tutorial web page.</p>
+<p>image_file: <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/input_image_inverted.png</a></p>
+<hr>
+
+
+<figure class="wp-block-image size-full"><img data-attachment-id="51138" data-permalink="https://karbytesforlifeblog.wordpress.com/image_color_inversion/input_image_inverted/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png" data-orig-size="2949,3193" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="input_image_inverted" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=277" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=946" width="2949" height="3193" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png" alt="" class="wp-image-51138" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png 2949w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=139&amp;h=150 139w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=277&amp;h=300 277w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=768&amp;h=832 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=946&amp;h=1024 946w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/input_image_inverted.png?w=1440&amp;h=1559 1440w" sizes="(max-width: 2949px) 100vw, 2949px" /></figure>
+
+
+<hr />
+<p>The image embedded in this web page below this paragraph is the respective input image to the aforementioned output image.</p>
+<p>image_file: <a style="background: #000000;color: #ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/abstract_drawing_karbytes_26december2025_p0.jpg" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_50/main/abstract_drawing_karbytes_26december2025_p0.jpg</a></p>
+<hr />
+
+<figure class="wp-block-image size-full"><img data-attachment-id="51140" data-permalink="https://karbytesforlifeblog.wordpress.com/image_color_inversion/abstract_drawing_karbytes_26december2025_p0-2/" data-orig-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg" data-orig-size="2949,3193" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;2.2&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;SM-A037U&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1766786725&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;3.39&quot;,&quot;iso&quot;:&quot;640&quot;,&quot;shutter_speed&quot;:&quot;0.049&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;,&quot;latitude&quot;:&quot;0&quot;,&quot;longitude&quot;:&quot;0&quot;}" data-image-title="abstract_drawing_karbytes_26december2025_p0" data-image-description="" data-image-caption="" data-medium-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=277" data-large-file="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=946" width="2949" height="3193" src="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg" alt="" class="wp-image-51140" srcset="https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg 2949w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=139&amp;h=150 139w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=277&amp;h=300 277w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=768&amp;h=832 768w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=946&amp;h=1024 946w, https://karbytesforlifeblog.wordpress.com/wp-content/uploads/2025/12/abstract_drawing_karbytes_26december2025_p0-1.jpg?w=1440&amp;h=1559 1440w" sizes="(max-width: 2949px) 100vw, 2949px" /></figure>
+
+<hr />
+<p>This web page was last updated on 30_DECEMBER_2025. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />
