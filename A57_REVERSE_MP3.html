@@ -1,0 +1,120 @@
+<hr>
+<p><strong>REVERSE_MP3</strong></p>
+<hr>
+<p><span style="background:#ffff00">The <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener">Python</a> program featured in this tutorial generates a reversed-playing version of some input audio file (in <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP3" target="_blank" rel="noopener">MP3</a> format).</span></p>
+<p>In the words of <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/GPT-5.2" target="_blank" rel="noopener">ChatGPT-5.2</a>,&#8221;The program takes a specific MP3 audio file as input, decodes its compressed sound data into an in-memory representation, reverses the temporal order of that audio so that the final sound becomes the first sound and the first sound becomes the final sound, and then writes this reversed sequence out as a new MP3 file at a user-defined location. No attempt is made to reinterpret, analyze, or modify the content of the audio beyond this strict reversal; the operation is mechanical and deterministic, transforming the input file into a time-inverted counterpart whose existence depends entirely on the presence and integrity of the original file. In this way, the program functions as a one-directional transformer of stored sound, turning a forward-moving recording into a reversed artifact that preserves structure while inverting order, suitable for archival, experimental, or purely observational purposes.&#8221;</p>
+<p>For the sake of making the media files linked to by this web page easily saveable to the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Wayback_Machine" target="_blank" rel="noopener">WayBack Machine</a>, karbytes embedded the MP3 files inside of <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/MP4_file_format" target="_blank" rel="noopener">MP4</a> files (with just the color black as the visual component of each of those video files). To convert those MP4 files back to MP3 files, use the Python script featured on the following <a style="background:#000000;color:#00ff00" href="https://karbytesforlifeblog.wordpress.com/software_engineering_portfolio/" target="_blank" rel="noopener">software engineering</a> tutorial web page:</p>
+<p><a style="background:#000000;color:#00ff00" href="https://karbytesforlifeblog.wordpress.com/mp4_to_mp3_converter/" target="_blank" rel="noopener">https://karbytesforlifeblog.wordpress.com/mp4_to_mp3_converter/</a>).</p>
+<p><em>To view hidden text inside each of the preformatted text boxes below, scroll horizontally.</em></p>
+<hr>
+<p><strong>SOFTWARE_APPLICATION_COMPONENTS</strong></p>
+<hr>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/reverse_mp3.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/reverse_mp3.py</a></p>
+<p>input_audio_(source_video): <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/blackened_karbytes_message_04jan2026_p0.mp4" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/blackened_karbytes_message_04jan2026_p0.mp4</a></p>
+<p>output_audio_(source_video): <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/blackened_karbytes_message_04jan2026_p0_[reversed_audio].mp4" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/blackened_karbytes_message_04jan2026_p0_[reversed_audio].mp4</a></p>
+<hr>
+<p><strong>PROGRAM_INTERPRETATION_AND_EXECUTION</strong></p>
+<hr>
+<p>STEP_0: Copy and paste the Python <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/reverse_mp3.py" target="_blank" rel="noopener">source code</a> into a new text editor document and save that document as the following file name:</p>
+<pre>reverse_mp3.py</pre>
+<p>STEP_1: Open a <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Unix" target="_blank" rel="noopener">Unix</a> command line terminal application and set the current directory to wherever the Python program file is located on the local machine (e.g. Desktop).</p>
+<pre>cd Desktop</pre>
+<p>STEP_2: Run the program by entering the following command:</p>
+<pre>python3 reverse_mp3.py</pre>
+<p>STEP_3: If the program interpretation command does not work, then use the following commands (in top-down order) to install the Python interpreter and, also, the requisite Python library files for reverse_mp3.py:</p>
+<pre>
+# Python interpreter
+sudo apt update
+sudo apt install python3
+
+# multi-media framework
+sudo apt install ffmpeg
+</pre>
+<p>STEP_4: Observe program results on the command line terminal and in the <a style="background:#000000;color:#ff9000" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/blackened_karbytes_message_04jan2026_p0_[reversed_audio].mp4" target="_blank" rel="noopener">output file</a>.</p>
+<hr>
+<p><strong>PROGRAM_SOURCE_CODE</strong></p>
+<hr>
+<p>Note that the text inside of each of the the preformatted text boxes below appears on this web page (while rendered correctly by the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Web_browser" target="_blank" rel="noopener">web browser</a>) to be identical to the content of that preformatted text box text&#8217;s respective <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Plain_text" target="_blank" rel="noopener">plain-text</a> file or <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Source_code" target="_blank" rel="noopener">source code</a> output file (whose <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/URL" target="_blank" rel="noopener">Uniform Resource Locator</a> is displayed as the <strong style="background:#000000;color:#00ff00">green</strong> <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener">hyperlink</a> immediately above that preformatted text box (if that hyperlink points to a <strong>source code file</strong>) or whose Uniform Resource Locator is displayed as the <strong style="background:#000000;color:#ff9000">orange</strong> hyperlink immediately above that preformatted text box (if that hyperlink points to a <strong>plain-text file</strong>)).</p>
+<p><em>(Note that angle brackets which resemble <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener">HTML</a> tags (i.e. an &#8220;is less than&#8221; symbol (i.e. &#8216;&lt;&#8216;) followed by an &#8220;is greater than&#8221; symbol (i.e. &#8216;&gt;&#8217;)) displayed on this web page have been replaced (at the source code level of this web page) with the Unicode symbols <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Less-than_sign" target="_blank" rel="noopener">U+003C</a> (which is rendered by the web browser as &#8216;&lt;&#8216;) and <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/Greater-than_sign" target="_blank" rel="noopener">U+003E</a> (which is rendered by the web browser as &#8216;&gt;&#8217;). That is because the <a style="background:#ff9000;color:#000000" href="https://en.wikipedia.org/wiki/WordPress.com" target="_blank" rel="noopener">WordPress</a> web page editor or web browser interprets a plain-text version of an &#8220;is less than&#8221; symbol followed by an &#8220;is greater than&#8221; symbol as being an opening HTML tag (which means that the WordPress web page editor or web browser deletes or fails to display those (plain-text) inequality symbols and the content between those (plain-text) inequality symbols)).</em></p>
+<p>python_source_file: <a style="background:#000000;color:#00ff00" href="https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/reverse_mp3.py" target="_blank" rel="noopener">https://raw.githubusercontent.com/karlinarayberinger/KARLINA_OBJECT_extension_pack_51/main/reverse_mp3.py</a></p>
+<hr>
+<pre>
+#########################################################################################
+# file: reverse_mp3.py
+# type: Python
+# date: 05_JANUARY_2026
+# author: karbytes
+# license: PUBLIC_DOMAIN 
+#########################################################################################
+
+"""
+This Python program reverses the playback order of a specific MP3 file.
+
+The input file path and output file path are explicitly defined
+inside this source code file to ensure reproducibility and clarity.
+
+The program performs the following steps:
+
+1. Loads the input MP3 file from disk
+2. Decodes the MP3 into raw audio samples
+3. Reverses the order of those samples
+4. Re-encodes the reversed samples as a new MP3 file
+"""
+
+import os
+from pydub import AudioSegment
+
+# -------------------------------------------------
+# user-defined file paths (edit these as needed)
+# -------------------------------------------------
+input_mp3_path = "input_audio.mp3"
+output_mp3_path = "input_audio_[reversed].mp3"
+
+# -------------------------------------------------
+# verify input file exists
+# -------------------------------------------------
+print("Input MP3 file path:")
+print(input_mp3_path)
+
+if not os.path.isfile(input_mp3_path):
+    print("Error: input MP3 file does not exist.")
+    raise SystemExit(1)
+
+# -------------------------------------------------
+# load MP3 file into memory
+# -------------------------------------------------
+print("Loading MP3 file into memory...")
+
+audio_data = AudioSegment.from_file(
+    input_mp3_path,
+    format="mp3"
+)
+
+# -------------------------------------------------
+# reverse audio samples
+# -------------------------------------------------
+print("Reversing audio samples...")
+
+reversed_audio_data = audio_data.reverse()
+
+# -------------------------------------------------
+# write reversed audio to output file
+# -------------------------------------------------
+print("Writing reversed MP3 file:")
+print(output_mp3_path)
+
+reversed_audio_data.export(
+    output_mp3_path,
+    format="mp3",
+    bitrate="192k"
+)
+
+# -------------------------------------------------
+# completion message
+# -------------------------------------------------
+print("Done.")
+print("Reversed MP3 file successfully created.")
+</pre>
+<hr />
+<p>This web page was last updated on 05_JANUARY_2026. The content displayed on this web page is licensed as <a style="background: #000000;color: #ff9000" href="https://karlinaobject.wordpress.com/public_domain/" target="_blank" rel="noopener">PUBLIC_DOMAIN</a> intellectual property.</p>
+<hr />
