@@ -1,0 +1,240 @@
+<!--
+  /**
+   * file: random_sound_track_player_with_stats.html
+   * type: Hyper-Text-Markup-Language
+   * date: 29_MARCH_2026
+   * author: karbytes
+   * license: PUBLIC_DOMAIN
+   */
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RANDOM_SOUND_TRACK_PLAYER_WITH_STATS</title>
+  <!-- Inline Cascading-Style-Sheet (CSS) code to control appearance of web page elements -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #111;
+      color: #eee;
+    }
+    button {
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+    #status, #stats {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #222;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #444;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <!-- Static header text at the top of the web page -->
+  <h1>RANDOM_SOUND_TRACK_PLAYER_WITH_STATS</h1>
+  
+  <!-- Click the button to initiate indefinitely-playing MP3 randomized selection (and silent audio MP3 looping to keep session active). -->
+  <button id="startButton">Start Playing Songs</button>
+  
+  <!-- The "status" element displays error messages, the name of the non-silent MP3 being played, or the default text between the opening and closing DIV tags. -->
+  <div id="status">Not playing.</div>
+
+  <!-- A dynamically-updated "stats" table displaying all the available non-silent MP3 files and how many times they have each been played during the current session. -->
+  <div id="stats">
+    <strong>Total Playtime (seconds):</strong> <span id="totalTime">0</span>
+    <table>
+      <thead>
+        <tr>
+          <th>MP3 File</th>
+          <th>Play Count</th>
+        </tr>
+      </thead>
+      <tbody id="playlistStats"></tbody>
+    </table>
+  </div>
+
+  <!-- The "audioPlayer" element maps to the non-silent MP3 files and allows them to be played via the web browser. -->
+  <audio id="audioPlayer"></audio>
+
+  <!-- The "silentAudioPlayer" element maps to the silent MP3 files and allows them to be played via the web browser. -->
+  <audio id="silentAudioPlayer"></audio>
+  
+<!-- Inline JavaScript (JS) code to control web page behavior -->
+<script>
+  /**
+   * On mobile devices such as an Android smartphone, only one browser tab and only one
+   * non-OS software application can be actively featured in the user's "viewport" per
+   * instant. By contrast, on more fully-featured machines such as a Ubuntu laptop computer,
+   * multiple browser tabs and multiple non-OS software applications can be running simultaneously
+   * inside of one "viewport" (i.e. user experience instant).
+   * 
+   * A "workaround" to prevent the randomized sound track player from stopping between songs on a
+   * mobile device is to (continuously) play multiple silent audio files which have staggered playtimes 
+   * so that there is always at least one of those silent audio files playing "in the background" (which 
+   * keeps the web application browser tab active until the browser tab is closed).
+   */
+
+  // Create a list of silent audio file URLs.
+  // const file_path_root = 'http://qkbrwfubnh4knc6kkhx6uepccavpwezdf2al7w2quepe3qociegsi3yd.onion/KARBYTES_BLOG_APPS/RANDOM_SOUND_TRACK_PLAYER_WITH_STATS/';
+  // const file_path_root = 'https://karlinarayberinger.github.io/KARBYTES_BLOG_APPS_github_hosted_website/RANDOM_SOUND_TRACK_PLAYER_WITH_STATS/';
+  const file_path_root = '';
+  const silentSoundTracks = [
+    file_path_root + 'empty_audio_10_seconds.mp3',
+    file_path_root + 'empty_audio_30_seconds.mp3',
+    file_path_root + 'empty_audio_45_seconds.mp3'
+  ];
+
+  // Create and configure silent audio elements.
+  const silentAudioElements = silentSoundTracks.map(src => {
+    const audio = new Audio(src);
+    audio.loop = true;
+    return audio;
+  });
+
+  function startPlayingSilentSoundTracks() {
+    silentAudioElements.forEach(audio => {
+      audio.play().catch(err => {
+        console.warn("Failed to play track:", err);
+      });
+    });
+  }
+  // "wrapper" function
+  function keep_session_active() {
+    startPlayingSilentSoundTracks();
+  }
+
+  // Create a handle to the hard-coded "silentAudioPlayer" HTML element.
+  const silentAudioPlayer = document.getElementById("silentAudioPlayer");
+
+  /***************************************************************/
+
+  // Define a list of non-silent audio files to play one-at-a-time in a randomized fashion after clicking the startButton.
+  const mp3Files = [
+      "guitar_karbytes_24february2026_p0.mp3",
+      "karbytes_guitar_13_may_2023.mp3",
+      "karbytes_guitar_07_june_2023.mp3",
+      "karbytes_guitar_castro_valley_california_12_december_2022.mp3",
+      "karbytes_guitar_16_october_2023.mp3",
+      "guitar_karbytes_20august2024.mp3",
+      "guitar_karbytes_14april2025.mp3",
+      "guitar_karbytes_13july2024.mp3",
+      "guitar_karbytes_25january2026_p0.mp3",
+      "guitar_karbytes_14june2025.mp3",
+      "guitar_karbytes_05june2025.mp3",
+      "guitar_karbytes_29january2025.mp3",
+      "guitar_karbytes_30july2024.mp3"
+  ];
+
+  // Create a handle to the hard-coded "audioPlayer" HTML element.
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  // Create handles to statistics-related HTML elements.
+  const statusBox = document.getElementById("status");
+  const totalTimeDisplay = document.getElementById("totalTime");
+  const playlistStatsBody = document.getElementById("playlistStats");
+
+  // Initialize program variables.
+  let isPlaying = false;
+  let currentIndex = -1;
+  let totalPlayTimeSeconds = 0;
+  let playCounts = {};
+  let lastTimeUpdate = 0;
+
+  // Initialize the play counts for each non-silent MP3 file.
+  mp3Files.forEach(file => {
+      playCounts[file] = 0;
+  });
+
+  // Populate the statistics table with non-silent audio files information.
+  function renderStats() {
+      totalTimeDisplay.textContent = Math.floor(totalPlayTimeSeconds);
+      playlistStatsBody.innerHTML = "";
+      mp3Files.forEach(file => {
+        const row = document.createElement("tr");
+        const nameCell = document.createElement("td");
+        nameCell.textContent = file;
+        const countCell = document.createElement("td");
+        countCell.textContent = playCounts[file];
+        row.appendChild(nameCell);
+        row.appendChild(countCell);
+        playlistStatsBody.appendChild(row);
+      });
+  }
+
+  // Generate a random nonnegative index number which represents one of the non-silent MP3 files listed in the table.
+  function getRandomIndex() {
+    if (mp3Files.length === 1) return 0;
+    let nextIndex;
+    do {
+      nextIndex = Math.floor(Math.random() * mp3Files.length);
+    } while (nextIndex === currentIndex);
+    return nextIndex;
+  }
+
+  // Randomly select a non-silent MP3 file to play. Then update its count and start playing it via the audioPlayer.
+  function playNextRandomSong() {
+    if (!isPlaying) return;
+    currentIndex = getRandomIndex();
+    const file = mp3Files[currentIndex];
+    playCounts[file] += 1;
+    renderStats();
+    audioPlayer.src = file;
+    audioPlayer.play().then(() => {
+      statusBox.textContent = "Now playing: " + file;
+      lastTimeUpdate = audioPlayer.currentTime;
+    }).catch(err => {
+      statusBox.textContent = "Error: " + err.message;
+    });
+  }
+
+  // Obtain the total playtime of the non-silent MP3 files.
+  audioPlayer.addEventListener("timeupdate", () => {
+    if (!isPlaying) return;
+    const currentTime = audioPlayer.currentTime;
+    const delta = currentTime - lastTimeUpdate;
+    if (delta > 0 && delta < 1) {
+      totalPlayTimeSeconds += delta;
+    }
+    lastTimeUpdate = currentTime;
+    totalTimeDisplay.textContent = Math.floor(totalPlayTimeSeconds);
+  });
+
+  // Upon the "event" of one non-silent MP3 audio finishing, have the audioPlayer randomly select the next song to play.
+  audioPlayer.addEventListener("ended", () => {
+    playNextRandomSong();
+  });
+
+  // Create a handle to the hard-coded "startButton" HTML element.
+  const startButton = document.getElementById("startButton");
+
+  // Upon the "event" of the startButton being clicked, initiate the silent audio track loops (which have staggered play times to prevent the browser tab from becoming idle).
+  startButton.addEventListener("click", () => {
+    if (!isPlaying) {
+      isPlaying = true;
+      startButton.style.display = "none"; // hide start button for an indefinitely long time
+      keep_session_active(); // keep at least one silent audio file playing "in the background" to prevent the non-silent audio files from ceasing to be played in succession.
+      playNextRandomSong();
+    }
+  });
+
+  // Populate the web page with current stats.
+  renderStats();
+</script>
+</body>
+</html>
